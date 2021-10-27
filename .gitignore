@@ -48,3 +48,9 @@ Thumbs.db
 *.mov
 *.wmv
 
+.cache/
+.env
+.firebaserc
+build/
+.firebase/
+firebase.json
