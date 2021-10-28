@@ -49,7 +49,6 @@ Thumbs.db
 *.wmv
 
 .cache/
-.env
 .firebaserc
 build/
 .firebase/
