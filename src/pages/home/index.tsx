@@ -1,7 +1,7 @@
-import "./App.css";
+import "./index.css";
 import { useMemo } from "react";
-import NavBar from "./navBar/navBar";
-import Home from "./Home";
+import NavBar from "../../components/navBar/navBar";
+import Home from "../../components/home/index";
 
 import * as anchor from "@project-serum/anchor";
 import { clusterApiUrl } from "@solana/web3.js";
@@ -40,7 +40,7 @@ const startDateSeed = parseInt(process.env.REACT_APP_CANDY_START_DATE!, 10);
 
 const txTimeout = 30000; // milliseconds (confirm this works for your project)
 
-const App = () => {
+const HomePage = () => {
   const endpoint = useMemo(() => clusterApiUrl(network), []);
 
   const wallets = useMemo(
@@ -82,4 +82,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default HomePage;
