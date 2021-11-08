@@ -198,11 +198,11 @@ const Home = (props: HomeProps) => {
       } */}
       
       <div style={{display: 'flex', flexDirection: 'row', marginBottom: '5px'}}>
-        <h1 style={{color: 'white', fontSize: '42px', marginBottom: '5px', marginTop: '5px'}}>Koby</h1>
-        <h1 style={{color: '#5658dd', fontSize: '42px', marginBottom: '5px',  marginTop: '5px'}}>Koby Games</h1>
+        <h1 style={{color: 'white', fontSize: '42px', marginBottom: '5px', marginTop: '5px'}}>Sol KittiesKoby</h1>
+        <h1 style={{color: '#5658dd', fontSize: '42px', marginBottom: '5px',  marginTop: '5px'}}>Sol Kitties</h1>
       </div>
 
-      <h3 style={{color: '#9ca9b3', marginBottom: '20px'}}>10 Koby NFTs on the Solana blockchain.</h3>
+      <h3 style={{color: '#9ca9b3', marginBottom: '20px'}}>10 SOL kitties NFTs on the Solana blockchain.</h3>
 
       {!wallet.connected && <ConnectButton>Connect Wallet</ConnectButton> }
 
