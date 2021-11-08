@@ -1,7 +1,33 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './styles.css'
 
 export const HomeHero = () => {
+  const [timer, setTimer] = useState({
+    day: '00',
+    hour: '00',
+    minute: '00',
+    second: '00'
+  })
+
+  useEffect(() => {
+    const myfunc = setInterval(function() {
+      const now = new Date().getTime();
+      const downDate = new Date("Nov 11, 2021 16:37:52").getTime()
+      var timeleft = downDate - now;
+          
+      const days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+      setTimer({
+        day: days > 9 ? `${days}` : `0${days}`,
+        hour: hours > 9 ? `${hours}` : `0${hours}`,
+        minute: minutes > 9 ? `${minutes}` : `0${minutes}`,
+        second: seconds > 9 ? `${seconds}` : `0${seconds}`
+      })
+    }, 1000)
+  }, [])
+
   return (
     <div className='home-hero'>
       <div className='top-section'>
@@ -21,22 +47,22 @@ export const HomeHero = () => {
           <div className='sale-collection'>The 1st drop of the Sol Kitties Collection</div>
           <div className='sale-time'>
             <div>
-              01
+              {timer.day}
               <div className='time-unit'>days</div>
             </div>
             <div> : </div>
             <div>
-              07 
+              {timer.hour} 
               <div className='time-unit'>hrs</div>
             </div>
             <div> : </div>
             <div>
-              24
+              {timer.minute}
               <div className='time-unit'>min</div>
             </div>
             <div> : </div>
             <div>
-              43 
+              {timer.second} 
               <div className='time-unit'>sec</div>
             </div>
           </div>
