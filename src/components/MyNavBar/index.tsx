@@ -11,7 +11,14 @@ export const MyNavBar = () => {
 
   const handleGoSection = (index: string) => {
     const element: any = document.getElementById(index)
-    element.scrollIntoView()
+    const topPos = element.offsetTop
+    let navBarHeight: any = document.getElementById('navBar')?.offsetHeight
+    if (navBarHeight === 0) navBarHeight = 70
+    window.scrollTo({
+      top: topPos - navBarHeight,
+      left: 100,
+      behavior: 'smooth'
+    })
     setIsMenu(false)
   }
 
@@ -22,7 +29,7 @@ export const MyNavBar = () => {
 
   return (
     <>
-      <div className='top-bar'>
+      <div className='top-bar' id='navBar'>
         <div className='logo-main'>
           <img className='logo' src={logo} alt='logo'/>
           <span className='logo-title'>Sol kittes</span>
@@ -42,7 +49,7 @@ export const MyNavBar = () => {
           </a>
         </div>
       </div>
-      <div className='mobile-nav'>
+      <div className='mobile-nav' id='mobileNav'>
         <div className='menu-list' onClick={() => setIsMenu(true)}>
           <MenuIcon />
         </div>

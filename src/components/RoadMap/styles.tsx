@@ -70,6 +70,11 @@ export const BannerContent = styled.div`
   @media (min-width: 1200px) {
     width: 1095px;
   }
+  @media (min-width: 1440px) {
+    width: 1462px;
+    height: 111px;
+    padding: 0 90px;
+  }
 
   > p {
     margin: 0;
@@ -89,6 +94,9 @@ export const BannerContent = styled.div`
 
     @media (min-width: 993px) {
       font-size: 52px;
+    }
+    @media (min-width: 1440px) {
+      font-size: 65px;
     }
   }
 `
@@ -203,6 +211,10 @@ export const MonthBoxWrapper = styled.div`
     @media (min-width: 1200px) {
       font-size: 35px;
     }
+
+    @media (min-width: 1440px) {
+      font-size: 47.0803px;
+    }
   }
 `
 
@@ -222,6 +234,10 @@ export const MonthBox = styled.div`
 
     @media (min-width: 1200px) {
       font-size: 43px;
+    }
+
+    @media (min-width: 1440px) {
+      font-size: 58px;
     }
   }
 `
@@ -275,6 +291,10 @@ export const TextWrappper = styled.div`
     text-transform: uppercase;
     color: #FFFFFF;
     margin: 0;
+
+    @media (min-width: 1440px) {
+      font-size: 44px;
+    }
   }
 `
 

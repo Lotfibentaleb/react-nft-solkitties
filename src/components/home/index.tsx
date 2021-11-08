@@ -202,7 +202,7 @@ const Home = (props: HomeProps) => {
         <h1 style={{color: '#5658dd', fontSize: '42px', marginBottom: '5px',  marginTop: '5px'}}>Sol kitties</h1>
       </div>
 
-      <h3 style={{color: '#9ca9b3', marginBottom: '20px'}}>10 Koby NFTs on the Solana blockchain.</h3>
+      <h3 style={{color: '#9ca9b3', marginBottom: '20px'}}>10 Sol Kitties NFTs on the Solana blockchain.</h3>
 
       {!wallet.connected && <ConnectButton>Connect Wallet</ConnectButton> }
 

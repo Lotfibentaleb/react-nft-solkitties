@@ -305,6 +305,10 @@ export const MainContentContainer = styled.div`
       font-size: 72px;
     }
   }
+
+  @media (min-width: 1440px) {
+    font-size: 96.2558px;
+  }
 `
 export const ContentWrapper = styled.div`
   display: flex;
@@ -399,7 +403,7 @@ export const ContentWrapper = styled.div`
       &:first-child {
         > div {
           p {
-            font-size: 32px;
+            font-size: 38px;
           }
         }
       }

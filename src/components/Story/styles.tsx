@@ -22,6 +22,11 @@ export const StoryContainer = styled.div`
       font-size: 80px;
       margin-left: 23px;
     }
+
+    @media (min-width: 1440px) {
+      font-size: 106.154px;
+      line-height: 145px;
+    }
   }
 
   p {
@@ -34,6 +39,10 @@ export const StoryContainer = styled.div`
 
     @media (min-width: 993px) {
       padding: 0 57px;
+    }
+    @media (min-width: 1440px) {
+      font-size: 43.5653px;
+      padding: 0 104px 0 90px;
     }
   }
 `

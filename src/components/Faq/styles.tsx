@@ -14,6 +14,10 @@ export const FaqContainer = styled.div`
     @media (min-width: 993px) {
       font-size: 72px;
     }
+
+    @media (min-width: 1440px) {
+      font-size: 96.2558px;
+    }
   }
 
   @media (min-width: 993px) {
@@ -34,6 +38,10 @@ export const TextBox = styled.div`
 
     @media (min-width: 993px) {
       font-size: 32px;
+    }
+    @media (min-width: 1440px) {
+      font-size: 32px;
+      font-size: 43.5653px;
     }
 
     &:first-child {

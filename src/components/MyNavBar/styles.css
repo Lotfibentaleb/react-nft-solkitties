@@ -5,6 +5,9 @@
 	background: #F1F1F1;
 	box-sizing: border-box;
 	color: #221567;
+	position: sticky;
+	top: 0px;
+	z-index: 9999;
 }
 .logo-main {
 	display: flex;
@@ -72,6 +75,10 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 15px;
+	position: sticky;
+	z-index: 999;
+	top: 0px;
+	background: white;
 }
 
 .menu-list {
@@ -150,5 +157,17 @@
 	}
 	.top-social img {
 		width: 50px;
+	}
+}
+
+@media (min-width: 1440px) {
+	.top-menu {
+		font-size: 46.8502px;
+	}
+	.logo-title {
+		font-size: 52.753px;
+	}
+	.logo{
+		width: 120px;
 	}
 }
