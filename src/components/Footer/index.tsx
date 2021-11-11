@@ -35,7 +35,7 @@ export const Footer = () => {
           <img src='assets/images/twitter.png' alt='twitter' onClick={() => redirectSite('https://twitter.com/')} />
           <img src='assets/images/discord.png' alt='discord' onClick={() => redirectSite('https://discord.com/')} />
         </SocialIconWrapper>
-        <p>Sol Kitties. All right reserved 2021</p>
+        <p>All rights reserved © Sol Kitties 2021</p>
       </FooterContainer>
       {isArrow && (
         <ArrowIconWrapper onClick={handleGoTop}>

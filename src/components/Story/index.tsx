@@ -1,6 +1,13 @@
 import React from 'react'
 import {
   StoryContainer,
+  YellowCircleBackgroundArea,
+  JoinDiscordArea,
+  DiscordImage,
+  YelloCircleBackground,
+  DiscordLeftPanel,
+  JoinButton,
+  DiscordRightPanel,
   UserListWrapper,
   UserProfileWrapper,
   UserPhotoWrapper,
@@ -20,8 +27,30 @@ export const Story = () => {
   return (
     <StoryContainer id='story'>
       <div className='main-layout'>
-        <div className='main-container'>  
-          <h1>Story</h1>
+        <div className='main-container'>
+          <YellowCircleBackgroundArea>
+            <YelloCircleBackground></YelloCircleBackground>
+            <JoinDiscordArea>
+              <DiscordImage>
+                <img src="assets/images/discord_yellow_icon.png" style={{width: '100%', height: '100%'}}/>
+              </DiscordImage>
+              <DiscordLeftPanel>
+                <div>
+                  JOIN OUR DISCORD
+                </div>
+                <p>
+                  Giveaways everyday untill our launch !
+                </p>
+                <JoinButton>
+                  JOIN
+                </JoinButton>
+              </DiscordLeftPanel>
+              <DiscordRightPanel>
+                <img src="assets/images/discord_area_avatar.png" />
+              </DiscordRightPanel>
+            </JoinDiscordArea>  
+          </YellowCircleBackgroundArea>
+          <h1>STORY</h1>
           <p>Thousands of years ago in this huge universe a happy planet belonged to mysterious Kitties, a planet that is full of life and joy. It was a precious homeland that kitties adored with all their heart but it did not last long.</p>
           <UserListWrapper>
             {userList.map((user, i) => (

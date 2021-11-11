@@ -17,6 +17,13 @@
 .main-container {
 	width: 945px;
 }
+
+@media (min-width: 870px) {
+	.main-container {
+		width: 850px;
+	}
+}
+
 .display-flex-center {
 	display: flex;
 	align-items: center;
@@ -102,7 +109,7 @@
 
 .mobile-item {
 	padding: 24px 24px 24px 0px;
-  border-bottom: 1px solid #efefef;
+  	border-bottom: 1px solid #efefef;
 	cursor: pointer;
 	transition: all 0.3s linear;
 }
@@ -147,6 +154,9 @@
 }
 
 @media (min-width: 1000px) {
+	.main-container {
+		width: 945px;
+	}
 	.top-menu {
 		font-size: 20px;
 	}

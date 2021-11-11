@@ -1,6 +1,7 @@
 .home-hero{
-  background: url('../../assets/part1/back-01.png');
-  background-size: cover;
+  background: url('../../assets/part1/back-01-stars.png'), linear-gradient(180deg, #224F93 0%, #161131 78.83%);
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: top;
 }
 
@@ -17,8 +18,8 @@
 }
 
 .welcome-title{
-  font-weight: bold;
-  font-size: 50px;
+  font-weight: 700;
+  font-size: 58px;
   line-height: 80px;
   color: #FFD029;
   font-family: 'Open Sans';
@@ -126,17 +127,33 @@
 }
 
 @media (min-width: 450px) {
+  .top-section {
+    text-align: center;
+  }
+  .sale {
+    text-align: center;
+  }
+  .sale-time {
+    margin-left: calc((100vw - 290px)/2);
+  }
+  .sale-desc {
+    margin-left: calc((100vw - 290px)/2);
+  }
   .sale-image {
     padding: 0;
   }
+  .sale-image-wrapper {
+    padding: 0px 30px;
+  }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 870px) {
   .welcome-title{
     font-size: 35px;
   }
   .sale-time{
     margin-top: 10px;
+    margin-left: 0px;
     font-size: 30px;
     padding:10px 15px;
     max-width: 250px;
@@ -171,19 +188,33 @@
   }
   .top-section {
     padding-top: 50px;
+    text-align: left;
   }
   .sale-image {
     margin-bottom: 0px;
   }
+  .bottom-section {
+    flex-direction: row;
+  }
+
+  .top-section {
+    text-align: left;
+  }
+  .sale {
+    text-align: left;
+  }
+  .sale-desc {
+    margin-left: 0px;
+  }
+  .sale-image-wrapper {
+    padding: 0px 30px;
+  }
 }
 
-@media (min-width: 768px) {
-
-}
-
-@media (min-width: 993px) {
+@media (min-width: 1050px) {
   .top-section{
     padding-top: 45px;
+    text-align: left;
   }
   .welcome-title{
     font-size: 59px;
@@ -208,7 +239,7 @@
     font-size: 17px;
   }
   .sale {
-    width: 40%;
+    width: 45%;
   }
   .sale-image {
     width: 60%;
@@ -230,5 +261,19 @@
   .sale-title {
     font-size: 35px;
     line-height: 48px;
+  }
+
+  .top-section {
+    text-align: left;
+  }
+  .sale {
+    text-align: left;
+  }
+  .sale-desc {
+    margin-left: 0px;
+  }
+  .sale-image-wrapper {
+    justify-content: space-between;
+    padding: 0px 0px;
   }
 }

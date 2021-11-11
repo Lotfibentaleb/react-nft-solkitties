@@ -9,6 +9,7 @@ import {
   MonthDescription,
   LeftMonthWrapper,
   MonthBox,
+  MonthBoxRight,
   RightTextWrapper,
   TextWrappper,
   MonthBoxWrapper,
@@ -85,13 +86,13 @@ export const RoadMap = () => {
                   <img src='assets/images/line-background.png' alt='line-background' />
                 </LineImageWrapper>
                 <CenterImageWrapper>
-                  <img src='assets/images/line-image1.png' alt='line-image1' />
+                  <img src='assets/images/line-image-1.png' alt='line-image1' />
                 </CenterImageWrapper>
                 <LeftMonthWrapper>
                   <MonthBoxWrapper>
                     <MonthBox>
                       <p>SEPTEMBER 2O21</p>
-                      <img src='assets/images/right-arrow.png' alt='right-arrow' style={{ marginLeft: '15px' }} />
+                      <img src='assets/images/right-arrow.png' alt='right-arrow' style={{ marginLeft: '5px' }} />
                     </MonthBox>
                   </MonthBoxWrapper>
                 </LeftMonthWrapper>
@@ -110,7 +111,7 @@ export const RoadMap = () => {
               </MonthDescription>
               <MonthDescription>
                 <CenterImageWrapper>
-                  <img src='assets/images/line-image2.png' alt='line-image2' />
+                  <img src='assets/images/line-image-2.png' alt='line-image2' />
                 </CenterImageWrapper>
                 <LeftTextWrapper>
                   <div>
@@ -120,32 +121,36 @@ export const RoadMap = () => {
                     </TextWrappper>
                     <TextWrappper>
                       <img src='assets/images/dot.png' alt='dot' />
-                      <p>GIVEAWAY  TO FIRST COMMUNITY HOLDERS</p>
+                      <p>
+                        <span style={{background: '#FFE71C', marginLeft: '-5px', paddingLeft: '5px', paddingRight: '5px', borderRadius: '1px'}}>
+                          GIVEAWAY
+                        </span>  TO FIRST COMMUNITY HOLDERS
+                      </p>
                     </TextWrappper>
                     <TextWrappper>
                       <img src='assets/images/dot.png' alt='dot' />
-                      <p>GIVEAWAY  TO EARLY ADOPTERS</p>
+                      <p><span style={{background: '#FFE71C', marginLeft: '-5px', paddingLeft: '5px', paddingRight: '5px', borderRadius: '1px'}}>GIVEAWAY</span>  TO EARLY ADOPTERS</p>
                     </TextWrappper>
                   </div>
                 </LeftTextWrapper>
                 <RightMonthWrapper>
                   <MonthBoxWrapper>
-                    <MonthBox>
-                      <p>OCTOBER 2O21</p>
-                      <img src='assets/images/right-arrow.png' alt='right-arrow' style={{ marginLeft: '15px' }} />
-                    </MonthBox>
+                    <MonthBoxRight>
+                      <img src='assets/images/left-arrow.png' alt='right-arrow' style={{ marginRight: '10px' }} />
+                      <p>NOVEMBER 2021</p>
+                    </MonthBoxRight>
                   </MonthBoxWrapper>
                 </RightMonthWrapper>
               </MonthDescription>
               <MonthDescription>
                 <CenterImageWrapper>
-                  <img src='assets/images/line-image3.png' alt='line-image3' />
+                  <img src='assets/images/line-image-3.png' alt='line-image3' />
                 </CenterImageWrapper>
                 <LeftMonthWrapper>
                   <MonthBoxWrapper>
                     <MonthBox>
-                      <p>NOVEMBER 2O21</p>
-                      <img src='assets/images/right-arrow.png' alt='right-arrow' style={{ marginLeft: '15px' }} />
+                      <p>DECEMBER 2O21</p>
+                      <img src='assets/images/right-arrow.png' alt='right-arrow' style={{ marginLeft: '5px' }} />
                     </MonthBox>
                   </MonthBoxWrapper>
                 </LeftMonthWrapper>
@@ -157,7 +162,17 @@ export const RoadMap = () => {
                     </TextWrappper>
                     <TextWrappper>
                       <img src='assets/images/dot.png' alt='dot' />
-                      <p>SUPER-RARE  and  legendary sol kitties   giveaway</p>
+                      <p>
+                        <span style={{background: '#e10fd1', marginLeft: '-5px', padding: '0px 5px', borderRadius: '1px'}}>
+                          SUPER-RARE
+                        </span>  and  
+                        <span style={{background: '#a0e72f', marginLeft: '5px',  padding: '0px 5px', borderRadius: '1px'}}>
+                          legendary
+                        </span> sol kitties   
+                        <span style={{background: '#FFE71C', marginLeft: '5px',  padding: '0px 5px', borderRadius: '1px'}}>
+                          giveaway
+                        </span>
+                      </p>
                     </TextWrappper>
                     <TextWrappper>
                       <img src='assets/images/dot.png' alt='dot' />
@@ -172,17 +187,25 @@ export const RoadMap = () => {
               </MonthDescription>
               <MonthDescription>
                 <CenterImageWrapper>
-                  <img src='assets/images/line-image4.png' alt='line-image4' />
+                  <img src='assets/images/line-image-4.png' alt='line-image4' />
                 </CenterImageWrapper>
                 <LeftTextWrapper>
                   <div>
                     <TextWrappper>
                       <img src='assets/images/dot.png' alt='dot' />
-                      <p>RAFFLES OF  SUPER-RARE  KITTIES</p>
+                      <p>RAFFLES OF  
+                        <span style={{background: '#e10fd1', marginLeft: '5px',  padding: '0px 5px', borderRadius: '1px'}}>
+                          SUPER-RARE</span>  KITTIES
+                      </p>
                     </TextWrappper>
                     <TextWrappper>
                       <img src='assets/images/dot.png' alt='dot' />
-                      <p>GIVEAWAY  OF  LEGENDARY  KITTIES</p>
+                      <p>
+                        <span style={{background: '#FFE71C', marginLeft: '-5px',  padding: '0px 5px', borderRadius: '1px'}}>
+                          GIVEAWAY</span> OF  
+                        <span style={{background: '#a0e72f', marginLeft: '5px',  padding: '0px 5px', borderRadius: '1px'}}>
+                          LEGENDARY</span>  KITTIES
+                      </p>
                     </TextWrappper>
                     <TextWrappper>
                       <img src='assets/images/dot.png' alt='dot' />
@@ -196,21 +219,21 @@ export const RoadMap = () => {
                 </LeftTextWrapper>
                 <RightMonthWrapper>
                   <MonthBoxWrapper>
-                    <MonthBox>
-                      <p>DECEMBER 2O22</p>
-                      <img src='assets/images/right-arrow.png' alt='right-arrow' style={{ marginLeft: '15px' }} />
-                    </MonthBox>
+                    <MonthBoxRight>
+                      <img src='assets/images/left-arrow.png' alt='right-arrow' style={{ marginRight: '15px' }} />
+                      <p>JANUARY 2O22</p>
+                    </MonthBoxRight>
                   </MonthBoxWrapper>
                 </RightMonthWrapper>
               </MonthDescription>
               <MonthDescription>
                 <CenterImageWrapper>
-                  <img src='assets/images/line-image5.png' alt='line-image5' />
+                  <img src='assets/images/line-image-5.png' alt='line-image5' />
                 </CenterImageWrapper>
                 <LeftMonthWrapper>
                   <MonthBoxWrapper>
                     <MonthBox>
-                      <p>JANUART 2O22</p>
+                      <p>FEBRARY 2O22</p>
                       <img src='assets/images/right-arrow.png' alt='right-arrow' style={{ marginLeft: '15px' }} />
                     </MonthBox>
                   </MonthBoxWrapper>
@@ -219,11 +242,19 @@ export const RoadMap = () => {
                   <div>
                     <TextWrappper>
                       <img src='assets/images/dot.png' alt='dot' />
-                      <p>3d sol kitties sneak peeks</p>
+                      <p>
+                        <span style={{background: '#e10fd1', color: '#ffffff', marginLeft: '-5px',  padding: '0px 5px', borderRadius: '1px'}}>3d
+                        </span> sol kitties sneak peeks
+                      </p>
                     </TextWrappper>
                     <TextWrappper>
                       <img src='assets/images/dot.png' alt='dot' />
-                      <p>3d sol kitties  giveaway  for early adopters and community supporters</p>
+                      <p>
+                        <span style={{background: '#e10fd1', color: '#ffffff', marginLeft: '-5px',  padding: '0px 5px', borderRadius: '1px'}}>3d
+                        </span> sol kitties  
+                        <span style={{background: '#FFE71C', marginLeft: '5px',  padding: '0px 5px', borderRadius: '1px'}}>giveaway
+                        </span>  for early adopters and community supporters
+                      </p>
                     </TextWrappper>
                     <TextWrappper>
                       <img src='assets/images/dot.png' alt='dot' />
@@ -235,7 +266,9 @@ export const RoadMap = () => {
                     </TextWrappper>
                     <TextWrappper>
                       <img src='assets/images/dot.png' alt='dot' />
-                      <p>ROYALTIES DISTRIBUTION!</p>
+                      <p>
+                      <span style={{background: '#FE5122', marginLeft: '-5px', color: '#ffffff', paddingLeft: '5px', paddingRight: '10px', borderRadius: '1px'}}>ROYALTIES DISTRIBUTION!
+                      </span></p>
                     </TextWrappper>
                   </div>
                 </RightTextWrapper>

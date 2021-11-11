@@ -25,22 +25,58 @@ export const FaqContainer = styled.div`
   }
 `
 
+export const CloudImage1 = styled.div`
+  background: url('assets/part2/cloud.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  position: absolute;
+  width: 194px;
+  height: 57px;
+  top: 230px;
+  right: -220px;
+`
+
+export const CloudImage2 = styled.div`
+  background: url('assets/part2/cloud.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  position: absolute;
+  width: 178px;
+  height: 51px;
+  top: 450px;
+  left: -190px;
+`
+
+export const CloudImage3 = styled.div`
+  background: url('assets/part2/cloud.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  position: absolute;
+  width: 132px;
+  height: 39px;
+  bottom: -50px;
+  right: 50px;
+`
+
 export const TextBox = styled.div`
-  background: #FFFDEB;
-  border-radius: 31px;
-  padding: 10px 27px;
+  background: #CAF5FF;
+  border-radius: 25px;
+  padding: 17px 27px;
   margin: 25px 0;
 
   > p {
-    font-size: 23px;
+    font-size: 17px;
     color: #000000;
     margin: 0;
 
     @media (min-width: 993px) {
-      font-size: 23px;
+      font-size: 17px;
     }
     @media (min-width: 1440px) {
-      font-size: 23px;
+      font-size: 17px;
     }
 
     &:first-child {

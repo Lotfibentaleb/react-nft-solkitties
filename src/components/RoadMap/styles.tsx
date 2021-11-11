@@ -1,7 +1,11 @@
 import styled from 'styled-components'
 
 export const RoadMapContainer = styled.div`
-  background: linear-gradient(0deg, #63D9FF 0%, #8CD5FF 42.64%, #3DA5FF 100%);
+  background: url('assets/part2/back-02-1.png'), linear-gradient(180deg, #63D9FF 0%, #8CD5FF 42.64%, #3DA5FF 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+
   padding-top: 50px;
 
   @media (min-width: 576px) {
@@ -18,8 +22,15 @@ export const VerticalLineWrapper = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  display: none;
   justify-content: center;
+
+  @media (min-width: 575px) {
+    display: none;
+  }
+
+  @media (min-width: 870px) {
+    display: flex;
+  }
 
   @media (min-width: 993px) {
     display: flex;
@@ -27,8 +38,9 @@ export const VerticalLineWrapper = styled.div`
 `
 
 export const Line = styled.div`
-  width: 8px;
+  width: 4px;
   background: white;
+  opacity: 0.52;
 `
 
 export const TopBackground = styled.div`
@@ -40,20 +52,22 @@ export const TopBackground = styled.div`
 `
 
 export const BannerWrapper = styled.div`
-  display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 80px;
   margin-top: -180px;
+  display: none;
 
   @media (min-width: 576px) {
     margin-top: 0;
     margin-bottom: 145px;
+    display: flex;
   }
 
   @media (min-width: 1000px) {
     margin-top: 0;
     margin-bottom: 80px;
+    display: flex;
   }
 `
 
@@ -158,32 +172,37 @@ export const MonthDescription = styled.div`
 `
 
 export const LeftMonthWrapper = styled.div`
-  padding-left: 0px;
+  padding-left: 60px;
   width: 100%;
   box-sizing: border-box;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  // padding-right: 60px;
 
   @media (min-width: 993px) {
     width: 50%;
-    justify-content: flex-start;
+    padding-right: 60px;
+    justify-content: flex-end;
+    padding-left: 0px;
   }
 
   @media (min-width: 1200px) {
-    
+    padding-right: 60px;
+    justify-content: flex-end;
+    padding-left: 0px;
   }
 `
 
 export const RightMonthWrapper = styled.div`
-  padding-left: 0px;
+  padding-left: 60px;
   width: 100%;
   box-sizing: border-box;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 
   @media (min-width: 993px) {
     width: 50%;
-    padding-left: 133px;
+    padding-left: 60px;
     justify-content: flex-start;
   }
 `
@@ -211,42 +230,85 @@ export const MonthBoxWrapper = styled.div`
 
 export const MonthBox = styled.div`
   height: 26px;
-  width: 237px;
+  width: 208px;
   background: #FE5122;
   border: 2.3528px solid #FFFFFF;
   border-radius: 55px;
-  padding: 9px 14px;
+  padding: 9px 10px;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
 
   > p {
+    font-family: 'Open Sans';
     font-weight: bold;
-    font-size: 22px;
+    font-size: 21px;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 30px;
+
+    @media (min-width: 870px) {
+      font-size: 21px;
+      justify-content: flex-start;
+    }
+
+    @media (min-width: 1000px) {
+      font-size: 21px;
+      justify-content: flex-end;
+    }
+
+    @media (min-width: 1440px) {
+      font-size: 21px;
+      justify-content: flex-end;
+    }
+  }
+
+  > img {
+    width: 20px;
+    height: 20px;
+  }
+`
+
+export const MonthBoxRight = styled.div`
+  height: 26px;
+  width: 208px;
+  background: #FE5122;
+  border: 2.3528px solid #FFFFFF;
+  border-radius: 55px;
+  padding: 9px 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  > p {
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 21px;
     color: #FFFFFF;
     margin: 0;
     line-height: 30px;
 
     @media (min-width: 1200px) {
-      font-size: 22px;
+      font-size: 21px;
     }
 
     @media (min-width: 1440px) {
-      font-size: 22px;
+      font-size: 21px;
     }
   }
 
   > img {
-    width: 26px;
-    height: 26px;
+    width: 20px;
+    height: 20px;
   }
 `
 
 export const RightTextWrapper = styled.div`
   width: 100%;
   box-sizing: border-box;
-  padding-left: 0px;
+  padding-left: 60px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 50px;
 
   @media (min-width: 993px) {
@@ -260,13 +322,15 @@ export const RightTextWrapper = styled.div`
 export const LeftTextWrapper = styled.div`
   width: 100%;
   box-sizing: border-box;
+  padding-left: 60px;
   padding-right: 0px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 
   @media (min-width: 993px) {
     margin-top: 0;
     padding-right: 50px;
+    padding-left: 0px;
     width: 50%;
     justify-content: flex-start;
   }
@@ -285,6 +349,7 @@ export const TextWrappper = styled.div`
   }
 
   p {
+    font-family: Dosis;
     font-weight: 800;
     font-size: 23px;
     line-height: 29px;
@@ -304,15 +369,20 @@ export const LineImageWrapper = styled.div`
   justify-content: center;
   width: 100%;
   left: 0;
-  top: -150px;
+  top: -90px;
   z-index: 1;
 
   img {
-    width: 502px;
+    width: 430px;
   }
 
   @media (min-width: 576px) {
     display: flex;
+    top: -150px;
+  }
+  @media (min-width: 1000px) {
+    display: flex;
+    top: -90px;
   }
 `
 
@@ -374,6 +444,7 @@ export const FooterBanner = styled.div`
   padding: 0px 33px;
   box-sizing: border-box;
   display: flex;
+  justify-content: center;
   align-items: center;
 
   @media (min-width: 993px) {
@@ -388,13 +459,14 @@ export const FooterBanner = styled.div`
     text-transform: uppercase;
     color: #FFFFFF;
     line-height: 51px;
+    font-family: Dosis;
 
     @media (min-width: 993px) {
       font-size: 28px;
     }
 
     @media (min-width: 993px) {
-      font-size: 35px;
+      font-size: 40px;
     }
   }
 `

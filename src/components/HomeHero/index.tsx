@@ -69,17 +69,16 @@ export const HomeHero = () => {
                 </div>
               </div>
               <div className='sale-desc'>
-                Sol Kitties is a revolutionary community-oriented
-                NFT project on Solana with unique Sharikng Royalty
+                Sol Kitties is a revolutionary community-oriented NFT project on Solana with unique Sharikng Royalty
                 Ecomony for Community.   &nbsp;&nbsp;
                 <span className='sale-desc-link'>Check more details.</span>
               </div>
             </div>
             <div className='sale-image'>
               <div className='sale-image-wrapper'>
-                <img src='assets/part1/SolKittie_0097.png' className='sale-image1' alt='image1' />
-                <img src='assets/part1/SolKittie_0096.png' className='sale-image1' alt='image2' />
-                <img src='assets/part1/SolKittie_0094.png' className='sale-image1' alt='image3'/>
+                <img src='assets/part1/SolKittie_001.png' className='sale-image1' alt='image1' />
+                <img src='assets/part1/SolKittie_002.png' className='sale-image1' alt='image2' />
+                <img src='assets/part1/SolKittie_003.png' className='sale-image1' alt='image3'/>
               </div>
             </div>
           </div>
