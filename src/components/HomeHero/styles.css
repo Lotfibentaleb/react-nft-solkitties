@@ -1,24 +1,25 @@
 .home-hero{
   background: url('../../assets/part1/back-01.png');
   background-size: cover;
-  background-position: center;
+  background-position: top;
 }
 
 .top-section{
-  height: 450px;
   box-sizing: border-box;
-  padding: 70px 20px 20px 20px;
+  padding: 45px 20px 30px 0px;
 }
 
 .welcome{
   font-weight: bold;
   font-size: 35px;
+  line-height: 39px;
   color: #FFFFFF;
 }
 
 .welcome-title{
   font-weight: bold;
   font-size: 50px;
+  line-height: 80px;
   color: #FFD029;
   font-family: 'Open Sans';
 }
@@ -26,14 +27,13 @@
 .welcome-desc{
   font-weight: 600;
   font-size: 23px;
-  line-height: 49px;
-  color: #A7D5FF;    
+  line-height: 22px;
+  color: #5ACEFF;    
   max-width: 100%;
 }
 
 .bottom-section{
   box-sizing: border-box;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   padding-bottom: 25px;
@@ -46,15 +46,16 @@
 
 .sale-title{
   font-weight: bold;
-  font-size: 48px;
-  line-height: 131px;
-  color: #FFD029;
+  font-size: 35px;
+  line-height: 48px;
+  color: #FF6BF0;
   font-family: 'Open Sans';
 }
 
 .sale-collection{
   font-weight: 600;
-  font-size: 25px;
+  font-size: 17px;
+  line-height: 24px;
   color: #FFFFFF;
 }
 
@@ -62,13 +63,13 @@
   display: flex;
   justify-content: space-between;
   background-color: #FFD029;
-  border-radius: 40px;
-  max-width: 737px;
+  border-radius: 30px;
+  max-width: 290px;
   line-height: 1;
   background-position: center;
-  margin-top: 20px;
+  margin-top: 10px;
   font-weight: bold;
-  font-size: 32px;
+  font-size: 38.5px;
   text-align: center;
   color: #161131;
   padding:10px 15px;
@@ -83,11 +84,11 @@
 
 .sale-desc {
   font-weight: 600;
-  font-size: 19px;
-  line-height: 42px;
-  color: #A7D5FF;    
+  font-size: 14.3px;
+  line-height: 19px;
+  color: #5ACEFF;    
   margin-top: 20px;
-  max-width: 890px;
+  max-width: 350px;
 }
 
 .sale-desc-link {
@@ -102,34 +103,6 @@
   color: #FFD029;
 }
 
-.join-discord {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 40px;
-  color: #FFFFFF;    
-  margin-top: 39px;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
-.join-discord:hover {
-  color:  #fff3b0;  
-}
-
-.join-discord-icon {
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
-  border-radius: 50%;
-  background-color: white;
-  margin-right: 19px;
-  display: inline-block;
-  background-image: url('../../assets/part1/DiscordNew.png');
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 .sale-image {
   width: 100%;
   margin-bottom: 125px;
@@ -141,48 +114,20 @@
 }
 
 .sale-image-wrapper {
-  position: relative;
-  width: 282px;
-  height: 282px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .sale-image1 {
-  width: 282px;
-  position: absolute;
-  left: 0px;
-  top: -180px;
-}
-
-.sale-image2 {
-  width: 282px;
-  position: absolute;
-  top: 180px;
-  right: 0px;
-}
-
-.sale-image3 {
-  width: 282px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  width: 174px;
+  height: 174px;
 }
 
 @media (min-width: 450px) {
   .sale-image {
     padding: 0;
-  }
-  .sale-image1{
-    left: -100px;
-    top: -10px;
-  }
-  
-  .sale-image2{
-    top: 65px;
-    right: -95px;
-  }
-  
-  .sale-image3{
-    top: -115px;
   }
 }
 
@@ -191,7 +136,7 @@
     font-size: 35px;
   }
   .sale-time{
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 30px;
     padding:10px 15px;
     max-width: 250px;
@@ -200,30 +145,12 @@
   .time-unit{
     font-size: 13px;
   }
-  .sale-image1 {
-    left: 0px;
-    top: 50px;
-    width: 150px;
-  }
-  
-  .sale-image2 {
-    top: 75px;
-    right: -25px;
-    width: 150px;
-  }
-  
-  .sale-image3 {
-    top: -32px;
-    left: 84px;
-    width: 150px;
-  }
   .bottom-section {
     flex-direction: row;
-    padding-top: 85px;
   }
   .sale-title {
     font-size: 35px;
-    line-height: 50px;
+    line-height: 48px;
   }
   .sale-collection {
     font-size: 15px;
@@ -244,11 +171,9 @@
   }
   .top-section {
     padding-top: 50px;
-    height: 300px;
   }
   .sale-image {
     margin-bottom: 0px;
-    margin-top: 0px;
   }
 }
 
@@ -258,125 +183,52 @@
 
 @media (min-width: 993px) {
   .top-section{
-    height: 500px;
+    padding-top: 45px;
   }
   .welcome-title{
-    font-size: 80px;
+    font-size: 59px;
   }
   .welcome {
-    font-size: 42px;
+    font-size: 28px;
   }
   .welcome-desc{
-    font-size: 27px;
+    width: 355px;
+    font-size: 16px;
   }
   .sale-image1 {
-    width: 282px;
-    left: -100px;
-    top: -10px;
-  }
-  .join-discord {
-    font-size: 24px;
-    line-height: 55px;
-  }
-  
-  .sale-image2 {
-    width: 282px;
-    top: 65px;
-    right: -95px;
-  }
-  
-  .sale-image3 {
-    width: 282px;
-    top: -115px;
-    left: 0px;
+    width: 174px;
   }
   .welcome-desc {
     max-width: 520px;
   }
   .time-unit{
-    font-size: 25px;
-  }
-  .top-section {
-    padding: 0px 52px;
-    padding-top: 80px;
-    height: 500px;
-  }
-  .bottom-section {
-    padding-left: 52px;
-    padding-top: 85px;
+    font-size: 14.5px;
   }
   .sale-collection {
-    font-size: 30px;
+    font-size: 17px;
   }
   .sale {
-    width: 50%;
+    width: 40%;
   }
   .sale-image {
-    width: 50%;
+    width: 60%;
     margin-bottom: 25px;
-    margin-top: 0px;
+    margin-top: 65px;
   }
   .sale-time{
-    margin-top: 35px;
-    font-size: 60px;
+    margin-top: 10px;
+    font-size: 38.5px;
     padding:13px 20px;
-    max-width: 500px;
-    border-radius: 40px;
+    max-width: 290px;
+    border-radius: 25px;
   }
   .sale-desc {
-    margin-top: 35px;
-    font-size: 27px;
-    line-height: 45px;
+    margin-top: 20px;
+    font-size: 14.3px;
+    line-height: 19px;
   }
   .sale-title {
-    font-size: 72px;
-    line-height: 131px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .top-section {
-    padding: 0px 52px;
-    padding-top: 129px;
-    height: 658px;
-  }
-  .time-unit{
-    font-size: 28px;
-  }
-  .welcome-desc {
-    font-size: 36.2638px;
-    max-width: 720px;
-  }
-  .sale-collection {
-    font-size: 46.8502px;
-  }
-  .sale-desc {
-    font-size: 36.2638px;
-    margin-top: 40px;
-    line-height: 49px;
-  }
-  .welcome-title {
-    font-size: 106.154px;
-  }
-  .welcome {
-    font-size: 56.8852px;
-  }
-  .sale-title {
-    font-size: 96.2558px;
-  }
-  .join-discord {
-    font-size: 46.8502px;
-  }
-  .join-discord-icon {
-    width: 59px;
-    height: 59px;
-    min-width: 59px;
-  }
-  .sale-time{
-    margin-top: 74px;
-    font-size: 73px;
-    padding:15px 23px;
-    margin-top: 50px;
-    max-width: 730px;
+    font-size: 35px;
+    line-height: 48px;
   }
 }

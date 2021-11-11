@@ -30,23 +30,27 @@ export const MyNavBar = () => {
   return (
     <>
       <div className='top-bar' id='navBar'>
-        <div className='logo-main'>
-          <img className='logo' src={logo} alt='logo'/>
-          <span className='logo-title'>Sol kittes</span>
-        </div>
-        <div>
-          <span className='top-menu top-mr' onClick={() => handleChangePage('/minting')}>Minting</span>
-          <span className='top-menu top-mr' onClick={() => handleGoSection('roadmap')}>Roadmap</span>
-          <span className='top-menu top-mr' onClick={() => handleGoSection('story')}>Story</span>
-          <span className='top-menu' onClick={() => handleGoSection('faq')}>FAQ</span>
-        </div>
-        <div className='top-social'>
-          <a href='https://twitter.com/'>
-            <img src={twitterIcon} alt='twitter'/>
-          </a>
-          <a href='https://discord.com/'>
-            <img src={discrodIcon} alt='discord'/>
-          </a>
+        <div className='main-layout'>
+          <div className='main-container display-flex-center'>
+            <div className='logo-main'>
+              <img className='logo' src={logo} alt='logo'/>
+              <span className='logo-title'>Sol kittes</span>
+            </div>
+            <div>
+              <span className='top-menu top-mr' onClick={() => handleChangePage('/minting')}>Minting</span>
+              <span className='top-menu top-mr' onClick={() => handleGoSection('roadmap')}>Roadmap</span>
+              <span className='top-menu top-mr' onClick={() => handleGoSection('story')}>Story</span>
+              <span className='top-menu' onClick={() => handleGoSection('faq')}>FAQ</span>
+            </div>
+            <div className='top-social'>
+              <a href='https://twitter.com/'>
+                <img src={twitterIcon} alt='twitter'/>
+              </a>
+              <a href='https://discord.com/'>
+                <img src={discrodIcon} alt='discord'/>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
       <div className='mobile-nav' id='mobileNav'>

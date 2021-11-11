@@ -10,39 +10,34 @@ export const StoryContainer = styled.div`
     padding: 25px;
   }
 
-  > h1 {
+  h1 {
     font-weight: bold;
-    font-size: 50px;
+    font-size: 35px;
     color: #FFD029;
     margin-top: 0;
     margin-bottom: 32px;
     margin-left: 0px;
 
     @media (min-width: 993px) {
-      font-size: 80px;
-      margin-left: 23px;
+      
     }
 
     @media (min-width: 1440px) {
-      font-size: 106.154px;
-      line-height: 145px;
+      line-height: 48px;
     }
   }
 
   p {
     font-weight: 600;
-    font-size: 32px;
+    font-size: 16px;
     color: #A7D5FF;
-    padding: 0 15px;
     margin-bottom: 37px;
     margin-top: 0;
 
     @media (min-width: 993px) {
-      padding: 0 57px;
     }
     @media (min-width: 1440px) {
-      font-size: 43.5653px;
-      padding: 0 104px 0 90px;
+      font-size: 16px;
     }
   }
 `
@@ -62,13 +57,8 @@ export const UserListWrapper = styled.div`
     }
 
     @media (min-width: 993px) {
-      margin: 15px;
-      width: calc(33% - 30px);
-    }
-
-    @media (min-width: 1200px) {
-      margin: 23px;
-      width: calc(25% - 46px);
+      margin: 10px;
+      width: calc(16.7% - 30px);
     }
   }
 `
@@ -76,7 +66,7 @@ export const UserListWrapper = styled.div`
 export const UserProfileWrapper = styled.div``
 
 export const UserPhotoWrapper = styled.div`
-  border-radius: 50px;
+  border-radius: 17px;
   background: #272E64;
   overflow: hidden;
 
@@ -86,20 +76,20 @@ export const UserPhotoWrapper = styled.div`
 `
 
 export const ColorSection = styled.div`
-  height: 80px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
 
   > p {
     font-weight: bold;
-    font-size: 35px;
+    font-size: 18.5px;
     text-align: center;
     color: #FFFFFF;
     margin: 0;
 
     @media (min-width: 768px) {
-      font-size: 40px;
+      font-size: 18.5px;
     }
   }
 `
@@ -110,19 +100,19 @@ export const UserInfoWrapper = styled.div`
   align-items: center;
 
   > div {
-    margin-top: 20px;
+    margin-top: 10px;
     width: 66%;
-    min-width: 272px;
+    min-width: 92px;
     background: #58B4F6;
     border-radius: 20px;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 18px;
     text-align: center;
     color: #15193B;
     text-transform: capitalize;
 
     @media (min-width: 768px) {
-      font-size: 41px;
+      font-size: 18px;
     }
   }
 `

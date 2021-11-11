@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const FaqContainer = styled.div`
   background: linear-gradient(180deg, #6BCFFF 0%, #9CDFFF 100%);
-  padding: 25px 25px 0 25px;
+  padding: 15px 22px 0 22px;
 
   > h1 {
     font-weight: bold;
@@ -27,25 +27,24 @@ export const FaqContainer = styled.div`
 
 export const TextBox = styled.div`
   background: #FFFDEB;
-  border-radius: 51px;
-  padding: 33px 27px;
+  border-radius: 31px;
+  padding: 10px 27px;
   margin: 25px 0;
 
   > p {
-    font-size: 25px;
+    font-size: 23px;
     color: #000000;
     margin: 0;
 
     @media (min-width: 993px) {
-      font-size: 32px;
+      font-size: 23px;
     }
     @media (min-width: 1440px) {
-      font-size: 32px;
-      font-size: 43.5653px;
+      font-size: 23px;
     }
 
     &:first-child {
-      margin-bottom: 20px;
+      margin-bottom: 5px;
     }
 
     span {

@@ -1,13 +1,17 @@
 import styled from 'styled-components'
 
 export const RoadMapContainer = styled.div`
-  position: relative;
   background: linear-gradient(0deg, #63D9FF 0%, #8CD5FF 42.64%, #3DA5FF 100%);
   padding-top: 50px;
 
   @media (min-width: 576px) {
     padding-top: 156px;
   }
+`
+
+export const RoadMapArea = styled.div`
+  width: 100%;
+  position: relative;
 `
 
 export const VerticalLineWrapper = styled.div`
@@ -32,7 +36,6 @@ export const TopBackground = styled.div`
   left: 0;
   top: 0;
   width: 100%;
-  height: 190px;
   background: linear-gradient(180deg, #161131 0%, #161131 0.01%, #4DACFF 100%);
 `
 
@@ -47,13 +50,18 @@ export const BannerWrapper = styled.div`
     margin-top: 0;
     margin-bottom: 145px;
   }
+
+  @media (min-width: 1000px) {
+    margin-top: 0;
+    margin-bottom: 80px;
+  }
 `
 
 export const BannerContent = styled.div`
   position: relative;
   background-image: url('assets/images/road-map-banner.png');
-  height: 83px;
-  width: 100%;
+  height: 52.5px;
+  width: 692px;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -67,20 +75,12 @@ export const BannerContent = styled.div`
     justify-content: space-between;
   }
 
-  @media (min-width: 1200px) {
-    width: 1095px;
-  }
-  @media (min-width: 1440px) {
-    width: 1462px;
-    height: 111px;
-    padding: 0 90px;
-  }
-
   > p {
     margin: 0;
-    font-size: 36px;
-    font-weight: 800;
+    font-size: 32px;
+    font-weight: bold;
     color: #FFFFFF;
+    line-height: 44px;
 
     &:first-child {
       display: none;
@@ -90,13 +90,6 @@ export const BannerContent = styled.div`
       &:first-child {
         display: block;
       }
-    }
-
-    @media (min-width: 993px) {
-      font-size: 52px;
-    }
-    @media (min-width: 1440px) {
-      font-size: 65px;
     }
   }
 `
@@ -108,7 +101,7 @@ export const RoadMapHeadWrapper = styled.div`
   align-items: center;
   width: 100%;
   left: 0;
-  top: -112px;
+  top: -72px;
   z-index: 2;
 
   @media (min-width: 576px) {
@@ -116,8 +109,8 @@ export const RoadMapHeadWrapper = styled.div`
   }
 
   > img {
-    width: 257px;
-    height: 256px;
+    width: 168px;
+    height: 168px;
   }
 `
 
@@ -148,7 +141,6 @@ export const MobileHead = styled.div`
 
 export const MonthDescription = styled.div`
   display: flex;
-  padding: 0 15px;
   position: relative;
   min-height: 210px;
   padding-top: 50px;
@@ -160,9 +152,8 @@ export const MonthDescription = styled.div`
   }
 
   @media (min-width: 993px) {
-    padding: 0 55px;
     flex-direction: row;
-    padding-top: 90px;
+    padding-top: 40px;
   }
 `
 
@@ -179,7 +170,7 @@ export const LeftMonthWrapper = styled.div`
   }
 
   @media (min-width: 1200px) {
-    padding-left: 46px;
+    
   }
 `
 
@@ -219,26 +210,34 @@ export const MonthBoxWrapper = styled.div`
 `
 
 export const MonthBox = styled.div`
-  height: 96px;
-  background: #288CE1;
-  border-radius: 64px;
-  padding: 18px 28px;
+  height: 26px;
+  width: 237px;
+  background: #FE5122;
+  border: 2.3528px solid #FFFFFF;
+  border-radius: 55px;
+  padding: 9px 14px;
   display: flex;
   align-items: center;
 
   > p {
     font-weight: bold;
-    font-size: 28px;
+    font-size: 22px;
     color: #FFFFFF;
     margin: 0;
+    line-height: 30px;
 
     @media (min-width: 1200px) {
-      font-size: 43px;
+      font-size: 22px;
     }
 
     @media (min-width: 1440px) {
-      font-size: 58px;
+      font-size: 22px;
     }
+  }
+
+  > img {
+    width: 26px;
+    height: 26px;
   }
 `
 
@@ -252,7 +251,7 @@ export const RightTextWrapper = styled.div`
 
   @media (min-width: 993px) {
     margin-top: 0;
-    padding-left: 117px;
+    padding-left: 64px;
     width: 50%;
     justify-content: flex-start;
   }
@@ -267,7 +266,7 @@ export const LeftTextWrapper = styled.div`
 
   @media (min-width: 993px) {
     margin-top: 0;
-    padding-right: 138px;
+    padding-right: 50px;
     width: 50%;
     justify-content: flex-start;
   }
@@ -279,21 +278,22 @@ export const TextWrappper = styled.div`
   margin-bottom: 13px;
 
   > img {
-    width: 46.5px;
-    height: 46.5px;
-    min-width: 46.5px;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
     margin-right: 15px;
   }
 
   p {
-    font-weight: bold;
-    font-size: 33px;
+    font-weight: 800;
+    font-size: 23px;
+    line-height: 29px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #003B61;
     margin: 0;
 
     @media (min-width: 1440px) {
-      font-size: 44px;
+      font-size: 23px;
     }
   }
 `
@@ -304,7 +304,7 @@ export const LineImageWrapper = styled.div`
   justify-content: center;
   width: 100%;
   left: 0;
-  top: -200px;
+  top: -150px;
   z-index: 1;
 
   img {
@@ -326,7 +326,7 @@ export const CenterImageWrapper = styled.div`
   z-index: 3;
 
   img {
-    width: 138px;
+    width: 87px;
   }
 
   @media (min-width: 576px) {
@@ -341,14 +341,14 @@ export const FooterImageWrapper = styled.div`
   z-index: 5;
 
   img {
-    width: 100%;
+    width: 545px;
     
     @media (min-width: 576px) {
       width: 80%;
     }
 
     @media (min-width: 1200px) {
-      width: 1080px;
+      width: 545px;
     }
   }
 `
@@ -362,8 +362,8 @@ export const FooterBannerWrapper = styled.div`
 `
 
 export const FooterBanner = styled.div`
-  width: 90%;
-  height: 127px;
+  width: 658px;
+  height: 90px;
   background-image: url('assets/images/road-footer-banner.png');
   box-sizing: border-box;
   position: relative;
@@ -371,13 +371,13 @@ export const FooterBanner = styled.div`
   background-size: cover;
   object-fit: cover;
   background-position: center;
-  padding: 0px 70px;
+  padding: 0px 33px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
 
   @media (min-width: 993px) {
-    width: 930px;
+    width: 658px;
   }
 
   > p {
@@ -387,13 +387,14 @@ export const FooterBanner = styled.div`
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
+    line-height: 51px;
 
     @media (min-width: 993px) {
       font-size: 28px;
     }
 
     @media (min-width: 993px) {
-      font-size: 40px;
+      font-size: 35px;
     }
   }
 `
@@ -411,7 +412,7 @@ export const GalleryWrapper = styled.div`
     }
 
     @media (min-width: 993px) {
-      width: 20%;
+      width: 11.1111%;
     }
   }
 `

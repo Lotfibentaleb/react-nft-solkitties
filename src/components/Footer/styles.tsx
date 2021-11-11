@@ -2,12 +2,12 @@ import styled from 'styled-components'
 
 export const FooterContainer = styled.div`
   background: #FFFFFF;
-  padding: 15px 25px 80px 25px;
+  padding: 10px 25px 10px 25px;
 
   p {
-    margin-top: 20px;
+    margin-top: 5px;
     margin-bottom: 0;
-    font-size: 27px;
+    font-size: 20px;
     color: #6C6C6C;
     text-align: center;
   }
@@ -19,6 +19,7 @@ export const SocialIconWrapper = styled.div`
   justify-content: center;
 
   img {
+    width: 26px;
     margin: 0 10px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
