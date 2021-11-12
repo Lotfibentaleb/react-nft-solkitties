@@ -353,7 +353,7 @@ export const TextWrappper = styled.div`
     font-family: Dosis;
     font-weight: 800;
     font-size: 23px;
-    line-height: 29px;
+    line-height: 32px;
     text-transform: uppercase;
     color: #003B61;
     margin: 0;
