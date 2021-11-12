@@ -1,9 +1,15 @@
 import React from 'react'
-import { Minting as MintingController } from '../../components/Minting'
+import { Minting as MintingController } from '../../components/Minting';
+import { MyNavBar } from "../../components/MyNavBar";
+import { Footer } from '../../components/Footer';
 
 const Minting = (props: any) => {
   return (
-    <MintingController />
+    <div style={{background: 'white'}}>
+      <MyNavBar />
+      <MintingController />
+      <Footer />
+    </div>
   )
 }
 
