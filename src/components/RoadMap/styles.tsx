@@ -9,7 +9,7 @@ export const RoadMapContainer = styled.div`
   padding-top: 50px;
 
   @media (min-width: 576px) {
-    padding-top: 156px;
+    padding-top: 140px;
   }
 `
 
@@ -167,7 +167,7 @@ export const MonthDescription = styled.div`
 
   @media (min-width: 993px) {
     flex-direction: row;
-    padding-top: 40px;
+    padding-top: 10px;
   }
 `
 
@@ -393,7 +393,7 @@ export const CenterImageWrapper = styled.div`
   justify-content: center;
   width: 100%;
   left: 0;
-  top: 0;
+  top: -12px;
   z-index: 3;
 
   img {
