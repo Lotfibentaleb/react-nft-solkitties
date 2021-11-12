@@ -5,21 +5,30 @@ import discrodIcon from '../../assets/topbar/discrodIcon.png'
 import twitterIcon from '../../assets/topbar/twitterIcon.png'
 import './styles.css'
 
+import { useLocation } from 'react-router-dom'
+
+
 export const MyNavBar = () => {
+  const location = useLocation();
   const history = useHistory()
   const [isMenu, setIsMenu] = useState(false)
 
   const handleGoSection = (index: string) => {
-    const element: any = document.getElementById(index)
-    const topPos = element.offsetTop
-    let navBarHeight: any = document.getElementById('navBar')?.offsetHeight
-    if (navBarHeight === 0) navBarHeight = 70
-    window.scrollTo({
-      top: topPos - navBarHeight,
-      left: 100,
-      behavior: 'smooth'
-    })
-    setIsMenu(false)
+
+    if (location.pathname === '/') {
+      const element: any = document.getElementById(index)
+      const topPos = element.offsetTop
+      let navBarHeight: any = document.getElementById('navBar')?.offsetHeight
+      if (navBarHeight === 0) navBarHeight = 70
+      window.scrollTo({
+        top: topPos - navBarHeight,
+        left: 100,
+        behavior: 'smooth'
+      })
+      setIsMenu(false)
+    } else {
+      history.push('/#' + index)
+    }
   }
 
   const handleChangePage = (index: string) => {
