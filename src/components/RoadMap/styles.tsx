@@ -177,7 +177,7 @@ export const LeftMonthWrapper = styled.div`
   box-sizing: border-box;
   display: flex;
   justify-content: flex-start;
-  // padding-right: 60px;
+  z-index: 3;
 
   @media (min-width: 993px) {
     width: 50%;
@@ -310,6 +310,7 @@ export const RightTextWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
   margin-top: 50px;
+  z-index: 3;
 
   @media (min-width: 993px) {
     margin-top: 0;
