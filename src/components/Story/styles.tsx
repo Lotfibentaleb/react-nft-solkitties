@@ -125,6 +125,7 @@ export const JoinButton = styled.div`
   height: 62px;
   background: #FFA800;
   border-radius: 16px;
+  cursor: pointer;
   
   color: #15193B!important;
   text-align: center;
