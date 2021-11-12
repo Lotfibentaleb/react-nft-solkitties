@@ -36,12 +36,15 @@
 .logo {
 	margin: 10px 0;
 	width: 50px;
+	background: #FFDD66;
+	border-radius: 10px;
 }
 .logo-title {
 	font-weight: bold;
 	font-size: 30px;
 	text-transform: uppercase;
 	margin-left: 15px;
+	color: #2F2B47;
 }
 .top-menu {
 	cursor: pointer;
@@ -49,6 +52,7 @@
 	font-size: 20px;
 	line-height: 27px;
 	transition: all 0.3s linear;
+	color: #656565;
 }
 .top-menu:hover {
 	color: #FFD029;
@@ -132,7 +136,7 @@
 
 @media (min-width: 768px) {
 	.logo {
-		margin: 10px 15px;
+		margin: 7px 15px;
 		width: 50px;
 	}
 

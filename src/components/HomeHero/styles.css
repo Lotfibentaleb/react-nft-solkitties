@@ -142,6 +142,7 @@
   }
   .sale-image {
     padding: 0;
+    margin-top: 110px;
   }
   .sale-image-wrapper {
     padding: 0px 30px;
@@ -193,6 +194,10 @@
   }
   .sale-image {
     margin-bottom: 0px;
+    margin-top: 150px;
+  }
+  .sale-image1 {
+    width: 155px;
   }
   .bottom-section {
     flex-direction: row;
@@ -245,7 +250,7 @@
   .sale-image {
     width: 60%;
     margin-bottom: 25px;
-    margin-top: 100px;
+    margin-top: 103px;
   }
   .sale-time{
     margin-top: 10px;
