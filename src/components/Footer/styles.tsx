@@ -5,7 +5,7 @@ export const FooterContainer = styled.div`
   padding: 10px 25px 10px 25px;
 
   p {
-    margin-top: 5px;
+    margin-top: 0px;
     margin-bottom: 0;
     font-size: 20px;
     color: #6C6C6C;
@@ -19,8 +19,8 @@ export const SocialIconWrapper = styled.div`
   justify-content: center;
 
   img {
-    width: 26px;
-    margin: 0 10px;
+    width: 35px;
+    margin: 7px 3px 0px 3px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 
