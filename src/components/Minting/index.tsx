@@ -122,18 +122,19 @@ const useStyles = makeStyles((theme: Theme) =>
       left: '-65%'
     },
     mintButton: {
+      position: 'absolute',
       width: '220.25px',
       height: '61.85px',
       background: '#FFD029',
-      marginTop: '20.5px',
-      margin: 'auto',
       borderRadius: '16px',
       fontWeight: 'bold',
       fontSize: '39px',
       lineHeight: '53px',
       color: '#161131',
       textAlign: 'center',
-      cursor: 'pointer'
+      cursor: 'pointer',
+      bottom: '-82px',
+      left: '0px'
     },
     mintDescription: {
       width: '253.7px',
@@ -142,7 +143,7 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: '17.8px',
       lineHeight: '21px',
       margin: 'auto',
-      marginTop: '6.15px',
+      marginTop: '88.15px',
       textAlign: 'center'
     },
     mintDescriptionPadding: {
@@ -288,8 +289,9 @@ export const Minting = () => {
                     <Typography className={classes.askText}>?</Typography>
                   </Box>
                 </Box>
+                <Box className={classes.mintButton}>Mint</Box>
               </Box>
-              <Box className={classes.mintButton}>Mint</Box>
+              
               <Box className={classes.mintDescription}>Max 20 per tansaction. Need more? Just repeat.</Box>
             </Grid>
             
