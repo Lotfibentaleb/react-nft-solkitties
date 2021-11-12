@@ -35,6 +35,15 @@ const useStyles = makeStyles((theme: Theme) =>
           height: '0px'
         }
       },
+      '& .MuiAccordionDetails-root': {
+        padding: '0px 16px 16px'
+      },
+      '& .MuiAccordionSummary-content.Mui-expanded': {
+        margin: '20px 0px 7px'
+      },
+      '& .MuiAccordionSummary-root.Mui-expanded': {
+        minHeight: '50px'
+      },
       marginBottom: '130px'
     },
     secondaryHeading1: {
