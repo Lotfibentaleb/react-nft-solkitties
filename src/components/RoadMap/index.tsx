@@ -1,32 +1,250 @@
 import React from 'react'
 import {
-  RoadMapContainer,
-  RoadMapArea,
-  TopBackground,
-  BannerWrapper,
-  RoadMapHeadWrapper,
-  BannerContent,
-  MonthDescription,
-  LeftMonthWrapper,
-  MonthBox,
-  MonthBoxRight,
-  RightTextWrapper,
-  TextWrappper,
-  MonthBoxWrapper,
-  LineImageWrapper,
-  VerticalLineWrapper,
-  Line,
-  CenterImageWrapper,
-  RightMonthWrapper,
-  LeftTextWrapper,
-  FooterImageWrapper,
-  FooterBannerWrapper,
-  FooterBanner,
   GalleryWrapper,
-  MobileHead
 } from './styles'
 
+import {Box, Grid, Typography, Hidden} from '@material-ui/core';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      width: '100%',
+      height: '2080px',
+      [theme.breakpoints.down('sm')]: {
+        height: 'auto'
+      },
+      display: 'flex',
+      justifyContent: 'center',
+      background: 'url(' + 'assets/part2/back-02-2.png' + '), linear-gradient(180deg, #63D9FF 0%, #8CD5FF 42.64%, #3DA5FF 100%)',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'top',
+      backgroundSize: 'cover',
+    },
+    mainContainser: {
+      width: '970px'
+    },
+
+    // Solana Avatar Row
+    solanaAvatarRow: {
+      width: '100%',
+      display: 'flex',
+      justifyContent: 'flex-end',
+      [theme.breakpoints.down('md')]: {
+        justifyContent: 'center',
+    },
+    },
+    solanaAvatarBox: {
+      width: '158px',
+      textAlign: 'right',
+      fontWeight: 'bold',
+      fontSize: '10.5px',
+      lineHeight: '13px',
+      color: '#43A4FF',
+      fontFamily: 'Orbitron',
+    },
+
+    // Roadmap Header Row
+    roadmapHeaderRow: {
+      position: 'relative',
+      width: '100%',
+      height: '52px',
+      display: 'flex',
+      justifyContent: 'center',
+      marginTop: '89px'
+    },
+    roadmapHeaderCenterLine: {
+      position: 'absolute',
+      width: '3.18px',
+      height: '1570px',
+      opacity: 0.5,
+      background: '#ffffff',
+      top: '150px',
+      [theme.breakpoints.down('sm')]: {
+        display: 'none'
+      },
+    },
+    roadmapHeaderCenterImageShadow: {
+      position: 'absolute',
+      width: '292px',
+      height: '292px',
+      background: 'radial-gradient(50% 50% at 50% 50%, #51ABFF 0%, rgba(131, 225, 255, 0.27) 51.56%, rgba(251, 67, 255, 0) 82.29%)',
+      top: '-110px'
+    },
+    roadmapHeaderCenterImage: {
+      position: 'absolute',
+      width: '168.9px',
+      height: '168.5px',
+      top: '-70px'
+    },
+    roadmapHeaderLabel: {
+      position: 'absolute',
+      width: '692px',
+      height: '53px',
+      background: 'url(' + '/assets/images/road-map-banner.png' + ')',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'top',
+      backgroundSize: 'contain',
+    },
+    roadmapHeaderLabelDetail: {
+      'fontFamily': 'Open Sans',
+      fontStyle: 'normal',
+      fontWeight: 'bold',
+      fontSize: '32.1421px',
+      lineHeight: '44px',
+      color: '#FFFFFF',
+      zIndex: 3
+    },
+    roadmapHeaderLineImage: {
+      position: 'absolute',
+      width: '100%',
+      height: '100%',
+      top: '0px',
+      left: '0px',
+      zIndex: 1
+    },
+    roadmmapHeaderDownImage: {
+      position: 'absolute',
+      width: '440px',
+      height: '440px',
+      top: '47px'
+    },
+
+
+
+    roadmapContent: {
+      position: 'relative',
+      width: '100%',
+      marginTop: '100px',
+      [theme.breakpoints.down('sm')]: {
+        marginTop: '200px',
+      },
+    },
+    roadmapContentCenterImage: {
+      position: 'absolute',
+      width: '100%',
+      height: '124px',
+      left: '0px',
+      display: 'flex',
+      justifyContent: 'center',
+      top: '-25px',
+      [theme.breakpoints.down('sm')]: {
+        top: '-130px',
+      },
+    },
+    leftMonthWrapper: {
+      display: 'flex',
+      justifyContent: 'space-between',
+      width: '237.37px',
+      height: '48px',
+      background: '#FE5122',
+      border: '2.3528px solid #FFFFFF',
+      boxSizing: 'border-box',
+      borderRadius: '24px',
+      alignItems: 'center',
+      padding: '0px 10px',
+      marginTop: '3px',
+      marginRight: '60px'
+    },
+    rightMonthWrapper: {
+      display: 'flex',
+      justifyContent: 'flex-start',
+      width: '237.37px',
+      height: '48px',
+      background: '#FE5122',
+      border: '2.3528px solid #FFFFFF',
+      boxSizing: 'border-box',
+      borderRadius: '24px',
+      alignItems: 'center',
+      padding: '0px 10px',
+      marginTop: '3px',
+    },
+    monthText: {
+      fontFamily: 'Open Sans',
+      fontStyle: 'normal',
+      fontWeight: 'bold',
+      fontSize: '21.75px',
+      lineHeight: '30px',
+      color: '#FFFFFF'
+    },
+
+    rightTextWrapper: {
+      width: '100%',
+      paddingLeft: '50px'
+    },
+    rightTextItem: {
+      display: 'flex',
+      justifyContent: 'flex-start',
+      margin: '15px'
+    },
+    rightTextDetail: {
+      fontFamily: 'Dosis',
+      fontStyle: 'normal',
+      fontWeight: 800,
+      fontSize: '23px',
+      lineHeight: '32px',
+      textTransform: 'uppercase',
+      color: '#003B61',
+      marginLeft: '11px'
+    },
+
+    leftTextWrapper: {
+      width: '100%',
+      position: 'relative',
+      [theme.breakpoints.down('sm')]: {
+        paddingLeft: '50px',
+      },
+    },
+
+    roadmapFooter: {
+      width: '100%',
+      display: 'flex',
+      justifyContent: 'center',
+      position: 'relative',
+      marginBottom: '25px'
+    },
+    roadmapFooterLabelImageArea: {
+      position: 'absolute',
+      width: '100%',
+      height: '90px',
+      display: 'flex',
+      justifyContent: 'center',
+      bottom: '-45px'
+    },
+    roadmapFooterLabelImage: {
+      width: '675px',
+      height: '95px',
+      background: 'url(' + '/assets/images/road-footer-banner.png' + ')',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'top',
+      backgroundSize: 'contain',
+      zIndex: 99,
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      color: '#FFFFFF',
+      [theme.breakpoints.down('xs')]: {
+        width: '100%'
+      },
+    },
+    roadmapFooterLabel: {
+      fontFamily: 'Dosis',
+      fontStyle: 'normal',
+      fontWeight: 800,
+      fontSize: '40.3646px',
+      lineHeight: '51px',
+      textAlign: 'center',
+      textTransform: 'uppercase',
+      [theme.breakpoints.down('xs')]: {
+        fontSize: '20px',
+      },
+    }
+  }),
+);
+
 export const RoadMap = () => {
+
+  const classes = useStyles()
 
   const imageList = [
     { id: 1, title: '1', url: 'assets/images/1.png' },
@@ -60,238 +278,376 @@ export const RoadMap = () => {
 
   return (
     <>
-      <RoadMapContainer id='roadmap'>
-        <div className='main-layout'>
-          <div className='main-container'>
-            <RoadMapArea>
-              <TopBackground />
-              <VerticalLineWrapper>
-                <Line />
-              </VerticalLineWrapper>
-              <MobileHead>
-                <img src='assets/images/road-map-head.png' alt='road-map-head' />
-                <img src='assets/images/line-background.png' alt='line-background' />
-              </MobileHead>
-              <BannerWrapper>
-                <BannerContent>
-                  <p>SOL KITTIES</p>
-                  <p>ROADMAP</p>
-                  <RoadMapHeadWrapper>
-                    <img src='assets/images/road-map-head.png' alt='road-map-head' />
-                  </RoadMapHeadWrapper>
-                </BannerContent>
-              </BannerWrapper>
-              <MonthDescription>
-                <LineImageWrapper>
-                  <img src='assets/images/line-background.png' alt='line-background' />
-                </LineImageWrapper>
-                <CenterImageWrapper>
-                  <img src='assets/images/line-image-1.png' alt='line-image1' />
-                </CenterImageWrapper>
-                <LeftMonthWrapper>
-                  <MonthBoxWrapper>
-                    <MonthBox>
-                      <p>SEPTEMBER 2O21</p>
-                      <img src='assets/images/right-arrow.png' alt='right-arrow' style={{ marginLeft: '5px' }} />
-                    </MonthBox>
-                  </MonthBoxWrapper>
-                </LeftMonthWrapper>
-                <RightTextWrapper>
-                  <div>
-                    <TextWrappper>
-                      <img src='assets/images/dot.png' alt='dot' />
-                      <p>HANDCRAFTING FIRST KITTIES</p>
-                    </TextWrappper>
-                    <TextWrappper>
-                      <img src='assets/images/dot.png' alt='dot' />
-                      <p>AN ARMY OF 3080 KITTIES START EMERGING</p>
-                    </TextWrappper>
-                  </div>
-                </RightTextWrapper>
-              </MonthDescription>
-              <MonthDescription>
-                <CenterImageWrapper>
-                  <img src='assets/images/line-image-2.png' alt='line-image2' />
-                </CenterImageWrapper>
-                <LeftTextWrapper>
-                  <div>
-                    <TextWrappper>
-                      <img src='assets/images/dot.png' alt='dot' />
-                      <p>WEBSITE LAUNCH</p>
-                    </TextWrappper>
-                    <TextWrappper>
-                      <img src='assets/images/dot.png' alt='dot' />
-                      <p>
-                        <span style={{background: '#FFE71C', marginLeft: '-5px', paddingLeft: '5px', paddingRight: '5px', borderRadius: '1px'}}>
-                          GIVEAWAY
-                        </span>  TO FIRST COMMUNITY HOLDERS
-                      </p>
-                    </TextWrappper>
-                    <TextWrappper>
-                      <img src='assets/images/dot.png' alt='dot' />
-                      <p><span style={{background: '#FFE71C', marginLeft: '-5px', paddingLeft: '5px', paddingRight: '5px', borderRadius: '1px'}}>GIVEAWAY</span>  TO EARLY ADOPTERS</p>
-                    </TextWrappper>
-                  </div>
-                </LeftTextWrapper>
-                <RightMonthWrapper>
-                  <MonthBoxWrapper>
-                    <MonthBoxRight>
-                      <img src='assets/images/left-arrow.png' alt='right-arrow' style={{ marginRight: '10px' }} />
-                      <p>NOVEMBER 2021</p>
-                    </MonthBoxRight>
-                  </MonthBoxWrapper>
-                </RightMonthWrapper>
-              </MonthDescription>
-              <MonthDescription>
-                <CenterImageWrapper>
-                  <img src='assets/images/line-image-3.png' alt='line-image3' />
-                </CenterImageWrapper>
-                <LeftMonthWrapper>
-                  <MonthBoxWrapper>
-                    <MonthBox>
-                      <p>DECEMBER 2O21</p>
-                      <img src='assets/images/right-arrow.png' alt='right-arrow' style={{ marginLeft: '5px' }} />
-                    </MonthBox>
-                  </MonthBoxWrapper>
-                </LeftMonthWrapper>
-                <RightTextWrapper>
-                  <div>
-                    <TextWrappper>
-                      <img src='assets/images/dot.png' alt='dot' />
-                      <p>PUBLIC PRESALE 550 NFTS</p>
-                    </TextWrappper>
-                    <TextWrappper>
-                      <img src='assets/images/dot.png' alt='dot' />
-                      <p>
-                        <span style={{background: '#e10fd1', marginLeft: '-5px', padding: '0px 5px', borderRadius: '1px'}}>
-                          SUPER-RARE
-                        </span>  and  
-                        <span style={{background: '#a0e72f', marginLeft: '5px',  padding: '0px 5px', borderRadius: '1px'}}>
-                          legendary
-                        </span> sol kitties   
-                        <span style={{background: '#FFE71C', marginLeft: '5px',  padding: '0px 5px', borderRadius: '1px'}}>
-                          giveaway
-                        </span>
-                      </p>
-                    </TextWrappper>
-                    <TextWrappper>
-                      <img src='assets/images/dot.png' alt='dot' />
-                      <p>PUBLIC SALE 2200 NFTS</p>
-                    </TextWrappper>
-                    <TextWrappper>
-                      <img src='assets/images/dot.png' alt='dot' />
-                      <p>SECOND MARKETPLACE LISTING!</p>
-                    </TextWrappper>
-                  </div>
-                </RightTextWrapper>
-              </MonthDescription>
-              <MonthDescription>
-                <CenterImageWrapper>
-                  <img src='assets/images/line-image-4.png' alt='line-image4' />
-                </CenterImageWrapper>
-                <LeftTextWrapper>
-                  <div>
-                    <TextWrappper>
-                      <img src='assets/images/dot.png' alt='dot' />
-                      <p>RAFFLES OF  
+    <Box className={classes.root}>
+      <Box className={classes.mainContainser}>
+        <Box className={classes.solanaAvatarRow}>
+          <Box className={classes.solanaAvatarBox}>
+            <Typography style={{fontFamily: 'Orbitron', fontSize: '10.65px'}}>POWERED BY</Typography>
+            <img src='assets/images/solana-avatar.png' style={{width: '100%', height: '30px'}} />
+          </Box>
+        </Box>
+        <Box className={classes.roadmapHeaderRow}>
+          <Box className={classes.roadmapHeaderCenterImageShadow}></Box>
+          <Box className={classes.roadmapHeaderCenterLine}></Box>
+          <Box className={classes.roadmapHeaderLabel}>
+            <Grid container>
+              <Grid item sm={6} style={{paddingTop: '5px', paddingLeft: '50px'}}>
+                <Typography className={classes.roadmapHeaderLabelDetail}>SOL KITTIES</Typography>
+              </Grid>
+              <Grid item sm={6} style={{paddingTop: '5px', paddingLeft: '120px'}}>
+                <Typography className={classes.roadmapHeaderLabelDetail}>ROADMAP</Typography>
+              </Grid>
+            </Grid>
+          </Box>
+          <Box className={classes.roadmmapHeaderDownImage}>
+            <img src='assets/images/line-background.png' style={{width: '100%', height: '100%'}} />
+          </Box>
+          <Box className={classes.roadmapHeaderCenterImage}>
+            <img src='assets/images/road-map-head.png' style={{width: '100%', height: '100%'}} alt='line-background' />
+          </Box>
+        </Box>
+
+{/** roadmap 1 */}
+        <Box className={classes.roadmapContent}>
+          <Box className={classes.roadmapContentCenterImage}>
+            <img src='/assets/images/line-image-1.png' />
+          </Box>
+          <Grid container>
+            <Grid item xs={12} sm={12} md={6} container justifyContent='flex-end'>
+              <Box className={classes.leftMonthWrapper}>
+                <Typography className={classes.monthText}>SEPTEMBER 2O21</Typography>
+                <img src='assets/images/right-arrow.png' alt='right-arrow' style={{width: '18.5px', height: '19.5px', marginLeft: '5px' }} />      
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={12} md={6}>
+              <Box className={classes.rightTextWrapper}>
+                <Box className={classes.rightTextItem}>
+                  <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                  <Typography className={classes.rightTextDetail}>HANDCRAFTING FIRST KITTIES</Typography>
+                </Box>
+                <Box className={classes.rightTextItem}>
+                  <img src='assets/images/dot.png' style={{width: '28px',  height: '28px'}} alt='dot' />
+                  <Typography className={classes.rightTextDetail}>AN ARMY OF 3080 KITTIES START EMERGING</Typography>
+                </Box>
+              </Box>
+            </Grid>
+          </Grid>
+        </Box>
+
+{/** roadmap 2 */}
+        <Hidden smDown>
+          <Box className={classes.roadmapContent}>
+            <Box className={classes.roadmapContentCenterImage}>
+              <img src='/assets/images/line-image-2.png' />
+            </Box>
+            <Grid container>
+              <Grid item sm={6} md={6}>
+                <Box className={classes.leftTextWrapper}>
+                  <Box className={classes.rightTextItem}>
+                    <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                    <Typography className={classes.rightTextDetail}>WEBSITE LAUNCH</Typography>
+                  </Box>
+                  <Box className={classes.rightTextItem}>
+                    <img src='assets/images/dot.png' style={{width: '28px',  height: '28px'}} alt='dot' />
+                    <Typography className={classes.rightTextDetail}>
+                      <span style={{background: '#FFE71C', marginLeft: '-5px', paddingLeft: '5px', paddingRight: '5px', borderRadius: '1px'}}>
+                            GIVEAWAY
+                      </span>  TO FIRST COMMUNITY HOLDERS
+                    </Typography>
+                  </Box>
+                  <Box className={classes.rightTextItem}>
+                    <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                    <Typography className={classes.rightTextDetail}><span style={{background: '#FFE71C', marginLeft: '-5px', paddingLeft: '5px', paddingRight: '5px', borderRadius: '1px'}}>GIVEAWAY</span>  TO EARLY ADOPTERS</Typography>
+                  </Box>
+                </Box>
+              </Grid>
+              <Grid item sm={6} md={6} container justifyContent='flex-start' style={{paddingLeft: '65px'}}>
+                <Box className={classes.rightMonthWrapper}>
+                  <img src='assets/images/left-arrow.png' alt='right-arrow' style={{width: '18.5px', height: '19.5px', marginRight: '5px' }} />      
+                  <Typography className={classes.monthText}>NOVEMBER 2021</Typography>
+                </Box>
+              </Grid>
+            </Grid>
+          </Box>
+        </Hidden>
+
+        <Hidden mdUp>
+          <Box className={classes.roadmapContent}>
+            <Box className={classes.roadmapContentCenterImage}>
+              <img src='/assets/images/line-image-2.png' />
+            </Box>
+            <Grid container>
+              <Grid item sm={12} md={6} container justifyContent='flex-end'>
+                <Box className={classes.leftMonthWrapper}>
+                  <Typography className={classes.monthText}>NOVEMBER 2021</Typography>
+                  <img src='assets/images/right-arrow.png' alt='right-arrow' style={{width: '18.5px', height: '19.5px', marginRight: '5px' }} />      
+                </Box>
+              </Grid>
+              <Grid item sm={12} md={6}>
+                <Box className={classes.leftTextWrapper}>
+                  <Box className={classes.rightTextItem}>
+                    <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                    <Typography className={classes.rightTextDetail}>WEBSITE LAUNCH</Typography>
+                  </Box>
+                  <Box className={classes.rightTextItem}>
+                    <img src='assets/images/dot.png' style={{width: '28px',  height: '28px'}} alt='dot' />
+                    <Typography className={classes.rightTextDetail}>
+                      <span style={{background: '#FFE71C', marginLeft: '-5px', paddingLeft: '5px', paddingRight: '5px', borderRadius: '1px'}}>
+                            GIVEAWAY
+                      </span>  TO FIRST COMMUNITY HOLDERS
+                    </Typography>
+                  </Box>
+                  <Box className={classes.rightTextItem}>
+                    <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                    <Typography className={classes.rightTextDetail}><span style={{background: '#FFE71C', marginLeft: '-5px', paddingLeft: '5px', paddingRight: '5px', borderRadius: '1px'}}>GIVEAWAY</span>  TO EARLY ADOPTERS</Typography>
+                  </Box>
+                </Box>
+              </Grid>
+            </Grid>
+          </Box>
+        </Hidden>
+
+
+{/** roadmap 3 */}
+        <Hidden smDown>
+          <Box className={classes.roadmapContent} style={{marginTop: '70px'}}>
+            <Box className={classes.roadmapContentCenterImage}>
+              <img src='/assets/images/line-image-3.png' />
+            </Box>
+            <Grid container>
+              <Grid item xs={12} sm={12} md={6} container justifyContent='flex-end'>
+                <Box className={classes.leftMonthWrapper}>
+                  <Typography className={classes.monthText}>DECEMBER 2O21</Typography>
+                  <img src='assets/images/right-arrow.png' alt='right-arrow' style={{width: '18.5px', height: '19.5px', marginLeft: '5px' }} />      
+                </Box>
+              </Grid>
+              <Grid item xs={12} sm={12} md={6}>
+                <Box className={classes.rightTextWrapper}>
+                  <Box className={classes.rightTextItem}>
+                    <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                    <Typography className={classes.rightTextDetail}>PUBLIC PRESALE 550 NFTS</Typography>
+                  </Box>
+                  <Box className={classes.rightTextItem}>
+                    <img src='assets/images/dot.png' style={{width: '28px',  height: '28px'}} alt='dot' />
+                    <Typography className={classes.rightTextDetail}><span style={{background: '#e10fd1', marginLeft: '-5px', padding: '0px 5px', borderRadius: '1px'}}>
+                            SUPER-RARE
+                          </span>  and  
+                          <span style={{background: '#a0e72f', marginLeft: '5px',  padding: '0px 5px', borderRadius: '1px'}}>
+                            legendary
+                          </span> sol kitties   
+                          <span style={{background: '#FFE71C', marginLeft: '5px',  padding: '0px 5px', borderRadius: '1px'}}>
+                            giveaway
+                          </span></Typography>
+                  </Box>
+                  <Box className={classes.rightTextItem}>
+                    <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                    <Typography className={classes.rightTextDetail}>PUBLIC SALE 2200 NFTS</Typography>
+                  </Box>
+                  <Box className={classes.rightTextItem}>
+                    <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                    <Typography className={classes.rightTextDetail}>SECOND MARKETPLACE LISTING!</Typography>
+                  </Box>
+                </Box>
+              </Grid>
+            </Grid>
+          </Box>
+        </Hidden>
+
+        <Hidden mdUp>
+          <Box className={classes.roadmapContent} style={{marginTop: '170px'}}>
+            <Box className={classes.roadmapContentCenterImage}>
+              <img src='/assets/images/line-image-3.png' />
+            </Box>
+            <Grid container>
+              <Grid item xs={12} sm={12} md={6} container justifyContent='flex-end'>
+                <Box className={classes.leftMonthWrapper}>
+                  <Typography className={classes.monthText}>DECEMBER 2O21</Typography>
+                  <img src='assets/images/right-arrow.png' alt='right-arrow' style={{width: '18.5px', height: '19.5px', marginLeft: '5px' }} />      
+                </Box>
+              </Grid>
+              <Grid item xs={12} sm={12} md={6}>
+                <Box className={classes.rightTextWrapper}>
+                  <Box className={classes.rightTextItem}>
+                    <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                    <Typography className={classes.rightTextDetail}>PUBLIC PRESALE 550 NFTS</Typography>
+                  </Box>
+                  <Box className={classes.rightTextItem}>
+                    <img src='assets/images/dot.png' style={{width: '28px',  height: '28px'}} alt='dot' />
+                    <Typography className={classes.rightTextDetail}><span style={{background: '#e10fd1', marginLeft: '-5px', padding: '0px 5px', borderRadius: '1px'}}>
+                            SUPER-RARE
+                          </span>  and  
+                          <span style={{background: '#a0e72f', marginLeft: '5px',  padding: '0px 5px', borderRadius: '1px'}}>
+                            legendary
+                          </span> sol kitties   
+                          <span style={{background: '#FFE71C', marginLeft: '5px',  padding: '0px 5px', borderRadius: '1px'}}>
+                            giveaway
+                          </span></Typography>
+                  </Box>
+                  <Box className={classes.rightTextItem}>
+                    <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                    <Typography className={classes.rightTextDetail}>PUBLIC SALE 2200 NFTS</Typography>
+                  </Box>
+                  <Box className={classes.rightTextItem}>
+                    <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                    <Typography className={classes.rightTextDetail}>SECOND MARKETPLACE LISTING!</Typography>
+                  </Box>
+                </Box>
+              </Grid>
+            </Grid>
+          </Box>
+        </Hidden>
+
+{/** roadmap 4 */}
+      <Hidden smDown>
+        <Box className={classes.roadmapContent} style={{marginTop: '80px'}}>
+          <Box className={classes.roadmapContentCenterImage}>
+            <img src='/assets/images/line-image-4.png' />
+          </Box>
+          <Grid container>
+            <Grid item sm={6} md={6}>
+              <Box className={classes.leftTextWrapper}>
+                <Box className={classes.rightTextItem}>
+                  <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                  <Typography className={classes.rightTextDetail}>RAFFLES OF  
                         <span style={{background: '#e10fd1', marginLeft: '5px',  padding: '0px 5px', borderRadius: '1px'}}>
-                          SUPER-RARE</span>  KITTIES
-                      </p>
-                    </TextWrappper>
-                    <TextWrappper>
-                      <img src='assets/images/dot.png' alt='dot' />
-                      <p>
-                        <span style={{background: '#FFE71C', marginLeft: '-5px',  padding: '0px 5px', borderRadius: '1px'}}>
+                          SUPER-RARE</span>  KITTIES</Typography>
+                </Box>
+                <Box className={classes.rightTextItem}>
+                  <img src='assets/images/dot.png' style={{width: '28px',  height: '28px'}} alt='dot' />
+                  <Typography className={classes.rightTextDetail}>
+                    <span style={{background: '#FFE71C', marginLeft: '-5px',  padding: '0px 5px', borderRadius: '1px'}}>
                           GIVEAWAY</span> OF  
                         <span style={{background: '#a0e72f', marginLeft: '5px',  padding: '0px 5px', borderRadius: '1px'}}>
                           LEGENDARY</span>  KITTIES
-                      </p>
-                    </TextWrappper>
-                    <TextWrappper>
-                      <img src='assets/images/dot.png' alt='dot' />
-                      <p>COLLABORATION WITH NFT ARTIST</p>
-                    </TextWrappper>
-                    <TextWrappper>
-                      <img src='assets/images/dot.png' alt='dot' />
-                      <p>COLLABORATION WITH INFLUENCERES</p>
-                    </TextWrappper>
-                  </div>
-                </LeftTextWrapper>
-                <RightMonthWrapper>
-                  <MonthBoxWrapper>
-                    <MonthBoxRight>
-                      <img src='assets/images/left-arrow.png' alt='right-arrow' style={{ marginRight: '15px' }} />
-                      <p>JANUARY 2O22</p>
-                    </MonthBoxRight>
-                  </MonthBoxWrapper>
-                </RightMonthWrapper>
-              </MonthDescription>
-              <MonthDescription>
-                <CenterImageWrapper>
-                  <img src='assets/images/line-image-5.png' alt='line-image5' />
-                </CenterImageWrapper>
-                <LeftMonthWrapper>
-                  <MonthBoxWrapper>
-                    <MonthBox>
-                      <p>FEBRARY 2O22</p>
-                      <img src='assets/images/right-arrow.png' alt='right-arrow' style={{ marginLeft: '15px' }} />
-                    </MonthBox>
-                  </MonthBoxWrapper>
-                </LeftMonthWrapper>
-                <RightTextWrapper>
-                  <div>
-                    <TextWrappper>
-                      <img src='assets/images/dot.png' alt='dot' />
-                      <p>
-                        <span style={{background: '#e10fd1', color: '#ffffff', marginLeft: '-5px',  padding: '0px 5px', borderRadius: '1px'}}>3d
-                        </span> sol kitties sneak peeks
-                      </p>
-                    </TextWrappper>
-                    <TextWrappper>
-                      <img src='assets/images/dot.png' alt='dot' />
-                      <p>
-                        <span style={{background: '#e10fd1', color: '#ffffff', marginLeft: '-5px',  padding: '0px 5px', borderRadius: '1px'}}>3d
+                  </Typography>
+                </Box>
+                <Box className={classes.rightTextItem}>
+                  <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                  <Typography className={classes.rightTextDetail}>COLLABORATION WITH NFT ARTIST</Typography>
+                </Box>
+                <Box className={classes.rightTextItem}>
+                  <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                  <Typography className={classes.rightTextDetail}>COLLABORATION WITH INFLUENCERES</Typography>
+                </Box>
+              </Box>
+            </Grid>
+            <Grid item sm={6} md={6} container justifyContent='flex-start' style={{paddingLeft: '65px'}}>
+              <Box className={classes.rightMonthWrapper}>
+                <img src='assets/images/left-arrow.png' alt='right-arrow' style={{width: '18.5px', height: '19.5px', marginRight: '15px' }} />      
+                <Typography className={classes.monthText}>JANUARY 2022</Typography>
+              </Box>
+            </Grid>
+          </Grid>
+        </Box>
+      </Hidden>
+
+      <Hidden mdUp>
+        <Box className={classes.roadmapContent}>
+          <Box className={classes.roadmapContentCenterImage}>
+            <img src='/assets/images/line-image-4.png' />
+          </Box>
+          <Grid container>
+            <Grid item sm={12} md={6} container justifyContent='flex-end'>
+              <Box className={classes.leftMonthWrapper}>
+                <Typography className={classes.monthText}>JANUARY 2022</Typography>
+                <img src='assets/images/right-arrow.png' alt='right-arrow' style={{width: '18.5px', height: '19.5px', marginRight: '15px' }} />      
+              </Box>
+            </Grid>
+            <Grid item sm={12} md={6}>
+              <Box className={classes.leftTextWrapper}>
+                <Box className={classes.rightTextItem}>
+                  <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                  <Typography className={classes.rightTextDetail}>RAFFLES OF  
+                        <span style={{background: '#e10fd1', marginLeft: '5px',  padding: '0px 5px', borderRadius: '1px'}}>
+                          SUPER-RARE</span>  KITTIES</Typography>
+                </Box>
+                <Box className={classes.rightTextItem}>
+                  <img src='assets/images/dot.png' style={{width: '28px',  height: '28px'}} alt='dot' />
+                  <Typography className={classes.rightTextDetail}>
+                    <span style={{background: '#FFE71C', marginLeft: '-5px',  padding: '0px 5px', borderRadius: '1px'}}>
+                          GIVEAWAY</span> OF  
+                        <span style={{background: '#a0e72f', marginLeft: '5px',  padding: '0px 5px', borderRadius: '1px'}}>
+                          LEGENDARY</span>  KITTIES
+                  </Typography>
+                </Box>
+                <Box className={classes.rightTextItem}>
+                  <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                  <Typography className={classes.rightTextDetail}>COLLABORATION WITH NFT ARTIST</Typography>
+                </Box>
+                <Box className={classes.rightTextItem}>
+                  <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                  <Typography className={classes.rightTextDetail}>COLLABORATION WITH INFLUENCERES</Typography>
+                </Box>
+              </Box>
+            </Grid>
+          </Grid>
+        </Box>
+      </Hidden>
+
+
+{/** roadmap 5 */}
+        <Box className={classes.roadmapContent} style={{marginTop: '155px'}}>
+          <Box className={classes.roadmapContentCenterImage}>
+            <img src='/assets/images/line-image-5.png' />
+          </Box>
+          <Grid container>
+            <Grid item xs={12} sm={12} md={6} container justifyContent='flex-end'>
+              <Box className={classes.leftMonthWrapper}>
+                <Typography className={classes.monthText}>FEBRUARY 2O21</Typography>
+                <img src='assets/images/right-arrow.png' alt='right-arrow' style={{width: '18.5px', height: '19.5px', marginLeft: '5px' }} />      
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={12} md={6}>
+              <Box className={classes.rightTextWrapper}>
+                <Box className={classes.rightTextItem} style={{marginBottom: '32px'}}>
+                  <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                  <Typography className={classes.rightTextDetail}><span style={{background: '#e10fd1', color: '#ffffff', marginLeft: '-5px',  padding: '0px 5px', borderRadius: '1px'}}>3d
+                        </span> sol kitties sneak peeks</Typography>
+                </Box>
+                <Box className={classes.rightTextItem}>
+                  <img src='assets/images/dot.png' style={{width: '28px',  height: '28px'}} alt='dot' />
+                  <Typography className={classes.rightTextDetail}><span style={{background: '#e10fd1', color: '#ffffff', marginLeft: '-5px',  padding: '0px 5px', borderRadius: '1px'}}>3d
                         </span> sol kitties  
                         <span style={{background: '#FFE71C', marginLeft: '5px',  padding: '0px 5px', borderRadius: '1px'}}>giveaway
-                        </span>  for early adopters and community supporters
-                      </p>
-                    </TextWrappper>
-                    <TextWrappper>
-                      <img src='assets/images/dot.png' alt='dot' />
-                      <p>marketplace listing: solanart, solsea and more</p>
-                    </TextWrappper>
-                    <TextWrappper>
-                      <img src='assets/images/dot.png' alt='dot' />
-                      <p>SECOND MARKETPLACE LISTING!</p>
-                    </TextWrappper>
-                    <TextWrappper>
-                      <img src='assets/images/dot.png' alt='dot' />
-                      <p>
-                      <span style={{background: '#FE5122', marginLeft: '-5px', color: '#ffffff', paddingLeft: '5px', paddingRight: '10px', borderRadius: '1px'}}>ROYALTIES DISTRIBUTION!
-                      </span></p>
-                    </TextWrappper>
-                  </div>
-                </RightTextWrapper>
-              </MonthDescription>
-              <FooterImageWrapper>
-                <img src='assets/images/2022.png' alt='2022' />
-                <FooterBannerWrapper>
-                  <FooterBanner>
-                    <p>
-                    TO CAPTURE GAMING INDUSTRY!
-                    </p> 
-                  </FooterBanner>
-                </FooterBannerWrapper>
-              </FooterImageWrapper>
-            </RoadMapArea>
-          </div>
-        </div>
-      </RoadMapContainer>
-      <GalleryWrapper>
-        {imageList.map((item, i) => (
-          <img src={item.url} alt={item.title} key={i} />
-        ))}
-      </GalleryWrapper>
+                        </span>  for early adopters and community supporters</Typography>
+                </Box>
+
+                <Box className={classes.rightTextItem}>
+                  <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                  <Typography className={classes.rightTextDetail}>marketplace listing: solanart, solsea and more</Typography>
+                </Box>
+
+                <Box className={classes.rightTextItem}>
+                  <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                  <Typography className={classes.rightTextDetail}>SECOND MARKETPLACE LISTING!</Typography>
+                </Box>
+
+                <Box className={classes.rightTextItem}>
+                  <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                  <Typography className={classes.rightTextDetail}><span style={{background: '#FE5122', marginLeft: '-5px', color: '#ffffff', paddingLeft: '5px', paddingRight: '10px', borderRadius: '1px'}}>ROYALTIES DISTRIBUTION!
+                      </span></Typography>
+                </Box>
+              </Box>
+            </Grid>
+          </Grid>
+        </Box>
+
+        <Box className={classes.roadmapFooter}>
+          <img src='assets/images/2022.png' style={{width: '545px', height: '252.4px'}} alt='2022' />
+          <Box className={classes.roadmapFooterLabelImageArea}>
+            <Box className={classes.roadmapFooterLabelImage}>
+              <Typography className={classes.roadmapFooterLabel}>TO CAPTURE GAMING INDUSTRY!</Typography>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
+     
+    <GalleryWrapper>
+      {imageList.map((item, i) => (
+        <img src={item.url} alt={item.title} key={i} />
+      ))}
+    </GalleryWrapper>
     </>
   )
 }

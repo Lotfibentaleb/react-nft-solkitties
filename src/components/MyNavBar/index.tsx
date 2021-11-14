@@ -45,7 +45,7 @@ export const MyNavBar = () => {
               <img className='logo' src={logo} alt='logo'/>
               <span className='logo-title'>Sol kittes</span>
             </div>
-            <div>
+            <div style={{marginLeft: '43px'}}>
               <span className='top-menu top-mr' onClick={() => handleChangePage('/minting')}>Minting</span>
               <span className='top-menu top-mr' onClick={() => handleGoSection('roadmap')}>Roadmap</span>
               <span className='top-menu top-mr' onClick={() => handleGoSection('story')}>Story</span>

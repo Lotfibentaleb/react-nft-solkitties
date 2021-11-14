@@ -345,7 +345,7 @@ export const Minting = () => {
             <Grid item lg={7} sm={12} md={12} xs={12}>
               <Box className={classes.solanaAvatarArea}>
                 <Box className={classes.solana}>
-                  <Typography>POWERED BY</Typography>
+                  <Typography style={{fontFamily: 'Orbitron', fontSize: '10.65px'}}>POWERED BY</Typography>
                   <img src='assets/images/solana-avatar.png' style={{width: '158px', height: '30px'}} />
                 </Box>
               </Box>
