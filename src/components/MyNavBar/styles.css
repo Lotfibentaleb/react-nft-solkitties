@@ -14,14 +14,17 @@
 	display: flex;
 	justify-content: center;
 }
-.main-container {
-	width: 970px;
+
+@media (min-width: 200px) {
+	.main-container {
+		width: 100%;
+	}
 }
 
 @media (min-width: 870px) {
-	/* .main-container {
-		width: 850px;
-	} */
+	.main-container {
+		width: 100%;
+	}
 }
 
 .display-flex-center {
@@ -45,6 +48,11 @@
 	text-transform: uppercase;
 	margin-left: 15px;
 	color: #2F2B47;
+}
+@media (max-width: 415px) {
+	.logo-title {
+		display: none;
+	}
 }
 .top-menu {
 	cursor: pointer;
@@ -135,6 +143,9 @@
 }
 
 @media (min-width: 768px) {
+	.main-container {
+		width: 100%;
+	}
 	.logo {
 		margin: 8px 10px;
 		width: 55px;

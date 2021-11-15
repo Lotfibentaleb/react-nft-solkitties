@@ -59,8 +59,9 @@ export const JoinDiscordArea = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   display: flex;
+  justify-content: 'flex-start';
   
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     background-image: none;
   }
 `
@@ -70,7 +71,7 @@ export const DiscordImage = styled.div`
   width: 120px;
   top: -30px;
   left: -20px;
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     display: none
   }
 `
@@ -82,7 +83,7 @@ export const YelloCircleBackground = styled.div`
   top: -65px;
   right: -45px;
   background: radial-gradient(50% 50% at 50% 50%, #FFC700 0%, rgba(255, 199, 0, 0) 100%);
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     display: none
   }
 `
@@ -94,6 +95,7 @@ export const DiscordLeftPanel = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
   > div {
     font-family: Open Sans;
@@ -113,10 +115,18 @@ export const DiscordLeftPanel = styled.div`
     color: #A7D5FF;
   }
 
-  @media (max-width: 700px) {
-    flex-direction: row;
+  @media (min-width: 200px) {
     width: 100%;
   }
+
+  @media (min-width: 700px) {
+    width: 100%;
+  }
+
+  @media (min-width: 900px) {
+    width: 55%;
+  }
+
 
 `
 
@@ -137,7 +147,6 @@ export const JoinButton = styled.div`
 `
 
 export const DiscordRightPanel = styled.div`
-  width: 45%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -146,13 +155,33 @@ export const DiscordRightPanel = styled.div`
     width: 214px;
   }
 
-  @media (mix-width: 700px) {
-    width: 100%;
-    width: 210px;
+  @media (min-width: 200px) {
+    width: 0%;
+    > img {
+      display: none;
+    }
   }
-  @media (mix-width: 900px) {
-    width: 100%;
-    width: 274px;
+
+  @media (min-width: 700px) {
+    width: 0%;
+    > img {
+      display: none;
+    }
+  }
+
+  @media (min-width: 700px) {
+    width: 45%;
+    > img {
+      display: block;
+      width: 214px;
+    }
+  }
+  @media (min-width: 900px) {
+    width: 45%;
+    > img {
+      display: block;
+      width: 214px;
+    }
   }
 `
 
@@ -175,7 +204,12 @@ export const UserListWrapper = styled.div`
   }
 `
 
-export const UserProfileWrapper = styled.div``
+export const UserProfileWrapper = styled.div`
+  margin-bottom: 0px;
+  @media (max-width: 900px) {
+    margin-bottom: 30px;
+  }
+`
 
 export const UserPhotoWrapper = styled.div`
   border-radius: 17px;

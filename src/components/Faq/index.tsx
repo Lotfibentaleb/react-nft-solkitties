@@ -46,19 +46,31 @@ const useStyles = makeStyles((theme: Theme) =>
       },
       marginBottom: '130px'
     },
+    expandIconImg: {
+      width: '22px',
+      [theme.breakpoints.down('xs')]: {
+        width: '17px',
+      },
+    },
     secondaryHeading1: {
       color: '#000000',
       textAlign: 'left',
       fontWeight: 600,
       fontSize: '17px',
-      fontFamily: 'Open Sans'
+      fontFamily: 'Open Sans',
+      [theme.breakpoints.down('xs')]: {
+        fontSize: '13px'
+      },
     },
     secondaryHeading2: {
       color: '#000000',
       textAlign: 'left',
       fontWeight: 400,
       fontSize: '17px',
-      fontFamily: 'Open Sans'
+      fontFamily: 'Open Sans',
+      [theme.breakpoints.down('xs')]: {
+        fontSize: '13px'
+      },
     },
   }),
 );
@@ -106,7 +118,7 @@ export const Faq = () => {
                                 setExpanded(-1);
                         }}>
                             <AccordionSummary
-                            expandIcon={<img src="assets/images/down-arrow.png" style={{width: '22px'}} />}
+                            expandIcon={<img src="assets/images/down-arrow.png" className={classes.expandIconImg} />}
                             aria-controls="panel1bh-content"
                             id="panel1bh-header"
                             >

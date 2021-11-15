@@ -22,7 +22,10 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundSize: 'cover',
     },
     mainContainser: {
-      width: '970px'
+      width: '970px',
+      [theme.breakpoints.down('sm')]: {
+        width: '100%'
+      },
     },
 
     // Solana Avatar Row
@@ -85,6 +88,28 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'top',
       backgroundSize: 'contain',
+
+      [theme.breakpoints.down('sm')]: {
+        width: '600px',
+        height: '45px',
+      },
+      [theme.breakpoints.down('xs')]: {
+        display: 'none'
+      },
+    },
+    readmapHeaderLeftLabel: {
+      paddingTop: '5px', 
+      paddingLeft: '50px',
+      [theme.breakpoints.down('xs')]: {
+        paddingLeft: '30px',
+      },
+    },
+    readmapHeaderRightLabel: {
+      paddingTop: '5px', 
+      paddingLeft: '120px',
+      [theme.breakpoints.down('xs')]: {
+        paddingLeft: '200px',
+      },
     },
     roadmapHeaderLabelDetail: {
       'fontFamily': 'Open Sans',
@@ -93,7 +118,16 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: '32.1421px',
       lineHeight: '44px',
       color: '#FFFFFF',
-      zIndex: 3
+      zIndex: 3,
+
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '25px',
+        lineHeight: '34px',
+      },
+      [theme.breakpoints.down('xs')]: {
+        fontSize: '16px',
+        lineHeight: '20px',
+      },
     },
     roadmapHeaderLineImage: {
       position: 'absolute',
@@ -132,6 +166,23 @@ const useStyles = makeStyles((theme: Theme) =>
         top: '-130px',
       },
     },
+    responsiveRightMonth: {
+      display: 'flex',
+      justifyContent: 'flex-end',
+      [theme.breakpoints.down('sm')]: {
+        justifyContent: 'flex-start',
+        paddingLeft: '70px'
+      },
+      [theme.breakpoints.down('xs')]: {
+        justifyContent: 'flex-start',
+        paddingLeft: '30px'
+      },
+    },
+    responsiveLeftMonth: {
+      display: 'flex',
+      justifyContent: 'flex-start',
+      paddingLeft: '65px'
+    },
     leftMonthWrapper: {
       display: 'flex',
       justifyContent: 'space-between',
@@ -144,7 +195,11 @@ const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center',
       padding: '0px 10px',
       marginTop: '3px',
-      marginRight: '60px'
+      marginRight: '60px',
+      [theme.breakpoints.down('sm')]: {
+        width: '200px',
+        height: '35px'
+      },
     },
     rightMonthWrapper: {
       display: 'flex',
@@ -158,6 +213,10 @@ const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center',
       padding: '0px 10px',
       marginTop: '3px',
+      [theme.breakpoints.down('sm')]: {
+        width: '200px',
+        height: '35px'
+      },
     },
     monthText: {
       fontFamily: 'Open Sans',
@@ -165,18 +224,43 @@ const useStyles = makeStyles((theme: Theme) =>
       fontWeight: 'bold',
       fontSize: '21.75px',
       lineHeight: '30px',
-      color: '#FFFFFF'
+      color: '#FFFFFF',
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '16px',
+      },
     },
 
     rightTextWrapper: {
       width: '100%',
-      paddingLeft: '50px'
+      paddingLeft: '50px',
+      [theme.breakpoints.down('xs')]: {
+        width: 'calc(100% - 60px)',
+        paddingLeft: '20px',
+        paddingRight: '20px',
+      },
     },
     rightTextItem: {
       display: 'flex',
       justifyContent: 'flex-start',
-      margin: '15px'
+      margin: '15px',
+      [theme.breakpoints.down('xs')]: {
+        margin: '10px',
+      },
     },
+
+    textLeftImage: {
+      width: '28px', 
+      height: '28px',
+      // [theme.breakpoints.down('sm')]: {
+      //   width: '24px',
+      //   height: '24px'
+      // },
+      // [theme.breakpoints.down('xs')]: {
+      //   width: '18px',
+      //   height: '18px'
+      // },
+    },
+
     rightTextDetail: {
       fontFamily: 'Dosis',
       fontStyle: 'normal',
@@ -185,7 +269,13 @@ const useStyles = makeStyles((theme: Theme) =>
       lineHeight: '32px',
       textTransform: 'uppercase',
       color: '#003B61',
-      marginLeft: '11px'
+      marginLeft: '11px',
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '18px',
+      },
+      [theme.breakpoints.down('xs')]: {
+        fontSize: '14px',
+      },
     },
 
     leftTextWrapper: {
@@ -193,6 +283,11 @@ const useStyles = makeStyles((theme: Theme) =>
       position: 'relative',
       [theme.breakpoints.down('sm')]: {
         paddingLeft: '50px',
+      },
+      [theme.breakpoints.down('xs')]: {
+        width: '100%',
+        paddingLeft: '20px',
+        paddingRight: '20px',
       },
     },
 
@@ -209,7 +304,10 @@ const useStyles = makeStyles((theme: Theme) =>
       height: '90px',
       display: 'flex',
       justifyContent: 'center',
-      bottom: '-45px'
+      bottom: '-45px',
+      [theme.breakpoints.down('xs')]: {
+        bottom: '-70px',
+      },
     },
     roadmapFooterLabelImage: {
       width: '675px',
@@ -224,7 +322,9 @@ const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center',
       color: '#FFFFFF',
       [theme.breakpoints.down('xs')]: {
-        width: '100%'
+        width: '100%',
+        paddingTop: '3px',
+        alignItems: 'flex-start',
       },
     },
     roadmapFooterLabel: {
@@ -235,8 +335,11 @@ const useStyles = makeStyles((theme: Theme) =>
       lineHeight: '51px',
       textAlign: 'center',
       textTransform: 'uppercase',
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '30px',
+      },
       [theme.breakpoints.down('xs')]: {
-        fontSize: '20px',
+        fontSize: '23px',
       },
     }
   }),
@@ -291,10 +394,10 @@ export const RoadMap = () => {
           <Box className={classes.roadmapHeaderCenterLine}></Box>
           <Box className={classes.roadmapHeaderLabel}>
             <Grid container>
-              <Grid item sm={6} style={{paddingTop: '5px', paddingLeft: '50px'}}>
+              <Grid item sm={6} className={classes.readmapHeaderLeftLabel}>
                 <Typography className={classes.roadmapHeaderLabelDetail}>SOL KITTIES</Typography>
               </Grid>
-              <Grid item sm={6} style={{paddingTop: '5px', paddingLeft: '120px'}}>
+              <Grid item sm={6} className={classes.readmapHeaderRightLabel}>
                 <Typography className={classes.roadmapHeaderLabelDetail}>ROADMAP</Typography>
               </Grid>
             </Grid>
@@ -313,7 +416,7 @@ export const RoadMap = () => {
             <img src='/assets/images/line-image-1.png' />
           </Box>
           <Grid container>
-            <Grid item xs={12} sm={12} md={6} container justifyContent='flex-end'>
+            <Grid item xs={12} sm={12} md={6} className={classes.responsiveRightMonth}>
               <Box className={classes.leftMonthWrapper}>
                 <Typography className={classes.monthText}>SEPTEMBER 2O21</Typography>
                 <img src='assets/images/right-arrow.png' alt='right-arrow' style={{width: '18.5px', height: '19.5px', marginLeft: '5px' }} />      
@@ -322,11 +425,11 @@ export const RoadMap = () => {
             <Grid item xs={12} sm={12} md={6}>
               <Box className={classes.rightTextWrapper}>
                 <Box className={classes.rightTextItem}>
-                  <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                  <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                   <Typography className={classes.rightTextDetail}>HANDCRAFTING FIRST KITTIES</Typography>
                 </Box>
                 <Box className={classes.rightTextItem}>
-                  <img src='assets/images/dot.png' style={{width: '28px',  height: '28px'}} alt='dot' />
+                  <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                   <Typography className={classes.rightTextDetail}>AN ARMY OF 3080 KITTIES START EMERGING</Typography>
                 </Box>
               </Box>
@@ -344,11 +447,11 @@ export const RoadMap = () => {
               <Grid item sm={6} md={6}>
                 <Box className={classes.leftTextWrapper}>
                   <Box className={classes.rightTextItem}>
-                    <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                    <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                     <Typography className={classes.rightTextDetail}>WEBSITE LAUNCH</Typography>
                   </Box>
                   <Box className={classes.rightTextItem}>
-                    <img src='assets/images/dot.png' style={{width: '28px',  height: '28px'}} alt='dot' />
+                    <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                     <Typography className={classes.rightTextDetail}>
                       <span style={{background: '#FFE71C', marginLeft: '-5px', paddingLeft: '5px', paddingRight: '5px', borderRadius: '1px'}}>
                             GIVEAWAY
@@ -356,12 +459,12 @@ export const RoadMap = () => {
                     </Typography>
                   </Box>
                   <Box className={classes.rightTextItem}>
-                    <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                    <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                     <Typography className={classes.rightTextDetail}><span style={{background: '#FFE71C', marginLeft: '-5px', paddingLeft: '5px', paddingRight: '5px', borderRadius: '1px'}}>GIVEAWAY</span>  TO EARLY ADOPTERS</Typography>
                   </Box>
                 </Box>
               </Grid>
-              <Grid item sm={6} md={6} container justifyContent='flex-start' style={{paddingLeft: '65px'}}>
+              <Grid item sm={6} md={6} className={classes.responsiveLeftMonth}>
                 <Box className={classes.rightMonthWrapper}>
                   <img src='assets/images/left-arrow.png' alt='right-arrow' style={{width: '18.5px', height: '19.5px', marginRight: '5px' }} />      
                   <Typography className={classes.monthText}>NOVEMBER 2021</Typography>
@@ -377,7 +480,7 @@ export const RoadMap = () => {
               <img src='/assets/images/line-image-2.png' />
             </Box>
             <Grid container>
-              <Grid item sm={12} md={6} container justifyContent='flex-end'>
+              <Grid item sm={12} md={6} className={classes.responsiveRightMonth}>
                 <Box className={classes.leftMonthWrapper}>
                   <Typography className={classes.monthText}>NOVEMBER 2021</Typography>
                   <img src='assets/images/right-arrow.png' alt='right-arrow' style={{width: '18.5px', height: '19.5px', marginRight: '5px' }} />      
@@ -386,11 +489,11 @@ export const RoadMap = () => {
               <Grid item sm={12} md={6}>
                 <Box className={classes.leftTextWrapper}>
                   <Box className={classes.rightTextItem}>
-                    <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                    <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                     <Typography className={classes.rightTextDetail}>WEBSITE LAUNCH</Typography>
                   </Box>
                   <Box className={classes.rightTextItem}>
-                    <img src='assets/images/dot.png' style={{width: '28px',  height: '28px'}} alt='dot' />
+                    <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                     <Typography className={classes.rightTextDetail}>
                       <span style={{background: '#FFE71C', marginLeft: '-5px', paddingLeft: '5px', paddingRight: '5px', borderRadius: '1px'}}>
                             GIVEAWAY
@@ -398,7 +501,7 @@ export const RoadMap = () => {
                     </Typography>
                   </Box>
                   <Box className={classes.rightTextItem}>
-                    <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                    <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                     <Typography className={classes.rightTextDetail}><span style={{background: '#FFE71C', marginLeft: '-5px', paddingLeft: '5px', paddingRight: '5px', borderRadius: '1px'}}>GIVEAWAY</span>  TO EARLY ADOPTERS</Typography>
                   </Box>
                 </Box>
@@ -415,7 +518,7 @@ export const RoadMap = () => {
               <img src='/assets/images/line-image-3.png' />
             </Box>
             <Grid container>
-              <Grid item xs={12} sm={12} md={6} container justifyContent='flex-end'>
+              <Grid item xs={12} sm={12} md={6} className={classes.responsiveRightMonth}>
                 <Box className={classes.leftMonthWrapper}>
                   <Typography className={classes.monthText}>DECEMBER 2O21</Typography>
                   <img src='assets/images/right-arrow.png' alt='right-arrow' style={{width: '18.5px', height: '19.5px', marginLeft: '5px' }} />      
@@ -424,11 +527,11 @@ export const RoadMap = () => {
               <Grid item xs={12} sm={12} md={6}>
                 <Box className={classes.rightTextWrapper}>
                   <Box className={classes.rightTextItem}>
-                    <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                    <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                     <Typography className={classes.rightTextDetail}>PUBLIC PRESALE 550 NFTS</Typography>
                   </Box>
                   <Box className={classes.rightTextItem}>
-                    <img src='assets/images/dot.png' style={{width: '28px',  height: '28px'}} alt='dot' />
+                    <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                     <Typography className={classes.rightTextDetail}><span style={{background: '#e10fd1', marginLeft: '-5px', padding: '0px 5px', borderRadius: '1px'}}>
                             SUPER-RARE
                           </span>  and  
@@ -440,11 +543,11 @@ export const RoadMap = () => {
                           </span></Typography>
                   </Box>
                   <Box className={classes.rightTextItem}>
-                    <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                    <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                     <Typography className={classes.rightTextDetail}>PUBLIC SALE 2200 NFTS</Typography>
                   </Box>
                   <Box className={classes.rightTextItem}>
-                    <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                    <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                     <Typography className={classes.rightTextDetail}>SECOND MARKETPLACE LISTING!</Typography>
                   </Box>
                 </Box>
@@ -459,7 +562,7 @@ export const RoadMap = () => {
               <img src='/assets/images/line-image-3.png' />
             </Box>
             <Grid container>
-              <Grid item xs={12} sm={12} md={6} container justifyContent='flex-end'>
+              <Grid item xs={12} sm={12} md={6} className={classes.responsiveRightMonth}>
                 <Box className={classes.leftMonthWrapper}>
                   <Typography className={classes.monthText}>DECEMBER 2O21</Typography>
                   <img src='assets/images/right-arrow.png' alt='right-arrow' style={{width: '18.5px', height: '19.5px', marginLeft: '5px' }} />      
@@ -468,11 +571,11 @@ export const RoadMap = () => {
               <Grid item xs={12} sm={12} md={6}>
                 <Box className={classes.rightTextWrapper}>
                   <Box className={classes.rightTextItem}>
-                    <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                    <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                     <Typography className={classes.rightTextDetail}>PUBLIC PRESALE 550 NFTS</Typography>
                   </Box>
                   <Box className={classes.rightTextItem}>
-                    <img src='assets/images/dot.png' style={{width: '28px',  height: '28px'}} alt='dot' />
+                    <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                     <Typography className={classes.rightTextDetail}><span style={{background: '#e10fd1', marginLeft: '-5px', padding: '0px 5px', borderRadius: '1px'}}>
                             SUPER-RARE
                           </span>  and  
@@ -484,11 +587,11 @@ export const RoadMap = () => {
                           </span></Typography>
                   </Box>
                   <Box className={classes.rightTextItem}>
-                    <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                    <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                     <Typography className={classes.rightTextDetail}>PUBLIC SALE 2200 NFTS</Typography>
                   </Box>
                   <Box className={classes.rightTextItem}>
-                    <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                    <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                     <Typography className={classes.rightTextDetail}>SECOND MARKETPLACE LISTING!</Typography>
                   </Box>
                 </Box>
@@ -507,13 +610,13 @@ export const RoadMap = () => {
             <Grid item sm={6} md={6}>
               <Box className={classes.leftTextWrapper}>
                 <Box className={classes.rightTextItem}>
-                  <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                  <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                   <Typography className={classes.rightTextDetail}>RAFFLES OF  
                         <span style={{background: '#e10fd1', marginLeft: '5px',  padding: '0px 5px', borderRadius: '1px'}}>
                           SUPER-RARE</span>  KITTIES</Typography>
                 </Box>
                 <Box className={classes.rightTextItem}>
-                  <img src='assets/images/dot.png' style={{width: '28px',  height: '28px'}} alt='dot' />
+                  <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                   <Typography className={classes.rightTextDetail}>
                     <span style={{background: '#FFE71C', marginLeft: '-5px',  padding: '0px 5px', borderRadius: '1px'}}>
                           GIVEAWAY</span> OF  
@@ -522,16 +625,16 @@ export const RoadMap = () => {
                   </Typography>
                 </Box>
                 <Box className={classes.rightTextItem}>
-                  <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                  <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                   <Typography className={classes.rightTextDetail}>COLLABORATION WITH NFT ARTIST</Typography>
                 </Box>
                 <Box className={classes.rightTextItem}>
-                  <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                  <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                   <Typography className={classes.rightTextDetail}>COLLABORATION WITH INFLUENCERES</Typography>
                 </Box>
               </Box>
             </Grid>
-            <Grid item sm={6} md={6} container justifyContent='flex-start' style={{paddingLeft: '65px'}}>
+            <Grid item sm={6} md={6} className={classes.responsiveLeftMonth}>
               <Box className={classes.rightMonthWrapper}>
                 <img src='assets/images/left-arrow.png' alt='right-arrow' style={{width: '18.5px', height: '19.5px', marginRight: '15px' }} />      
                 <Typography className={classes.monthText}>JANUARY 2022</Typography>
@@ -547,7 +650,7 @@ export const RoadMap = () => {
             <img src='/assets/images/line-image-4.png' />
           </Box>
           <Grid container>
-            <Grid item sm={12} md={6} container justifyContent='flex-end'>
+            <Grid item sm={12} md={6} className={classes.responsiveRightMonth}>
               <Box className={classes.leftMonthWrapper}>
                 <Typography className={classes.monthText}>JANUARY 2022</Typography>
                 <img src='assets/images/right-arrow.png' alt='right-arrow' style={{width: '18.5px', height: '19.5px', marginRight: '15px' }} />      
@@ -556,13 +659,13 @@ export const RoadMap = () => {
             <Grid item sm={12} md={6}>
               <Box className={classes.leftTextWrapper}>
                 <Box className={classes.rightTextItem}>
-                  <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                  <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                   <Typography className={classes.rightTextDetail}>RAFFLES OF  
                         <span style={{background: '#e10fd1', marginLeft: '5px',  padding: '0px 5px', borderRadius: '1px'}}>
                           SUPER-RARE</span>  KITTIES</Typography>
                 </Box>
                 <Box className={classes.rightTextItem}>
-                  <img src='assets/images/dot.png' style={{width: '28px',  height: '28px'}} alt='dot' />
+                  <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                   <Typography className={classes.rightTextDetail}>
                     <span style={{background: '#FFE71C', marginLeft: '-5px',  padding: '0px 5px', borderRadius: '1px'}}>
                           GIVEAWAY</span> OF  
@@ -571,11 +674,11 @@ export const RoadMap = () => {
                   </Typography>
                 </Box>
                 <Box className={classes.rightTextItem}>
-                  <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                  <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                   <Typography className={classes.rightTextDetail}>COLLABORATION WITH NFT ARTIST</Typography>
                 </Box>
                 <Box className={classes.rightTextItem}>
-                  <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                  <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                   <Typography className={classes.rightTextDetail}>COLLABORATION WITH INFLUENCERES</Typography>
                 </Box>
               </Box>
@@ -591,7 +694,7 @@ export const RoadMap = () => {
             <img src='/assets/images/line-image-5.png' />
           </Box>
           <Grid container>
-            <Grid item xs={12} sm={12} md={6} container justifyContent='flex-end'>
+            <Grid item xs={12} sm={12} md={6} className={classes.responsiveRightMonth}>
               <Box className={classes.leftMonthWrapper}>
                 <Typography className={classes.monthText}>FEBRUARY 2O21</Typography>
                 <img src='assets/images/right-arrow.png' alt='right-arrow' style={{width: '18.5px', height: '19.5px', marginLeft: '5px' }} />      
@@ -600,12 +703,12 @@ export const RoadMap = () => {
             <Grid item xs={12} sm={12} md={6}>
               <Box className={classes.rightTextWrapper}>
                 <Box className={classes.rightTextItem} style={{marginBottom: '32px'}}>
-                  <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                  <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                   <Typography className={classes.rightTextDetail}><span style={{background: '#e10fd1', color: '#ffffff', marginLeft: '-5px',  padding: '0px 5px', borderRadius: '1px'}}>3d
                         </span> sol kitties sneak peeks</Typography>
                 </Box>
                 <Box className={classes.rightTextItem}>
-                  <img src='assets/images/dot.png' style={{width: '28px',  height: '28px'}} alt='dot' />
+                  <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                   <Typography className={classes.rightTextDetail}><span style={{background: '#e10fd1', color: '#ffffff', marginLeft: '-5px',  padding: '0px 5px', borderRadius: '1px'}}>3d
                         </span> sol kitties  
                         <span style={{background: '#FFE71C', marginLeft: '5px',  padding: '0px 5px', borderRadius: '1px'}}>giveaway
@@ -613,17 +716,17 @@ export const RoadMap = () => {
                 </Box>
 
                 <Box className={classes.rightTextItem}>
-                  <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                  <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                   <Typography className={classes.rightTextDetail}>marketplace listing: solanart, solsea and more</Typography>
                 </Box>
 
                 <Box className={classes.rightTextItem}>
-                  <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                  <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                   <Typography className={classes.rightTextDetail}>SECOND MARKETPLACE LISTING!</Typography>
                 </Box>
 
                 <Box className={classes.rightTextItem}>
-                  <img src='assets/images/dot.png' style={{width: '28px', height: '28px'}} alt='dot' />
+                  <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                   <Typography className={classes.rightTextDetail}><span style={{background: '#FE5122', marginLeft: '-5px', color: '#ffffff', paddingLeft: '5px', paddingRight: '10px', borderRadius: '1px'}}>ROYALTIES DISTRIBUTION!
                       </span></Typography>
                 </Box>
