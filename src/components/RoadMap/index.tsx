@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme: Theme) =>
       background: '#ffffff',
       top: '150px',
       [theme.breakpoints.down('sm')]: {
-        display: 'none'
+        height: '2050px',
       },
     },
     roadmapHeaderCenterImageShadow: {
