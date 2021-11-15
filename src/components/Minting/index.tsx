@@ -12,12 +12,13 @@ import {
 
 // styles
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import { calcTimeDelta } from 'react-countdown';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       background: "url('../../assets/part1/bg-mint2.png'), linear-gradient(180deg, #224F93 0%, #161131 78.83%)",
-      backgroundSize: 'contain',
+      backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'top',
       width: '100%'
@@ -28,44 +29,74 @@ const useStyles = makeStyles((theme: Theme) =>
       fontFamily: 'Open Sans',
       fontStyle: 'normal',
       [theme.breakpoints.down('sm')]: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: 'column',
-        margin: 'auto',
-        marginTop: '45px'
+        width: 'calc(100% - 60px)',
+        paddingLeft: '40px'
+      },
+      [theme.breakpoints.down('xs')]: {
+        width: 'calc(100% - 40px)',
+        paddingLeft: '20px'
       }
     },
     welcomeTitle: {
       fontWeight: 'bold',
       fontSize: '28px',
       lineHeight: '39px',
-      color: '#FFFFFF'
+      color: '#FFFFFF',
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '27px',
+      },
+      [theme.breakpoints.down('xs')]: {
+        fontSize: '25px',
+      }
     },
     welcomeSol: {
       fontWeight: 'bold',
       fontSize: '58px',
       lineHeight: '80px',
-      color: '#FFD029'
+      color: '#FFD029',
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '48px',
+      },
+      [theme.breakpoints.down('xs')]: {
+        fontSize: '37px',
+      }
     },
     welcomeSubTitle: {
       fontWeight: 600,
       fontSize: '16px',
       lineHeight: '22px',
-      color: '#A7D5FF'
+      color: '#A7D5FF',
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '14px',
+      },
+      [theme.breakpoints.down('xs')]: {
+        fontSize: '13px',
+      }
     },
     mintTitle: {
       marginTop: '29px',
       fontWeight: 'bold',
       fontSize: '35px',
       lineHeight: '48px',
-      color: '#E16BFF'
+      color: '#E16BFF',
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '30px',
+      },
+      [theme.breakpoints.down('xs')]: {
+        fontSize: '25px',
+      }
     },
     mintSubTitle: {
       fontWeight: 600,
       fontSize: '17px',
       lineHeight: '24px',
-      color: '#FFFFFF'
+      color: '#FFFFFF',
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '14px',
+      },
+      [theme.breakpoints.down('xs')]: {
+        fontSize: '13px',
+      }
     },
     mintAvatarArea: {
       position: 'relative',
@@ -77,6 +108,13 @@ const useStyles = makeStyles((theme: Theme) =>
       margin: 'auto',
       [theme.breakpoints.down('sm')]: {
         marginTop: '150px',
+        width: '180px',
+        height: '180px'
+      },
+      [theme.breakpoints.down('xs')]: {
+        marginTop: '100px',
+        width: '120px',
+        height: '120px'
       }
     },
     mintAvatar: {
@@ -91,7 +129,15 @@ const useStyles = makeStyles((theme: Theme) =>
       margin: 'auto',
       display: 'flex',
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'center',
+      [theme.breakpoints.down('sm')]: {
+        width: '180px',
+        height: '180px'
+      },
+      [theme.breakpoints.down('xs')]: {
+        width: '120px',
+        height: '120px'
+      }
     },
     mintImg: {
       width: '137px',
@@ -103,12 +149,19 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
+      [theme.breakpoints.down('xs')]: {
+        width: '100px',
+        height: '100px'
+      }
     },
     askText: {
       fontWeight: 'bold',
       fontSize: '85px',
       lineHeight: '120px',
-      color: '#C08A13'
+      color: '#C08A13',
+      [theme.breakpoints.down('xs')]: {
+        fontSize: '65px',
+      }
     },
     mintAvatars: {
       position: 'absolute',
@@ -119,7 +172,19 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'top',
       top: '-20%',
-      left: '-65%'
+      left: '-65%',
+      [theme.breakpoints.down('sm')]: {
+        width: '450px',
+        height: '300px',
+        top: '-25px',
+        left: '-125px',
+      },
+      [theme.breakpoints.down('xs')]: {
+        width: '280px',
+        height: '200px',
+        top: '-20px',
+        left: '-70px',
+      }
     },
     mintButton: {
       position: 'absolute',
@@ -134,7 +199,18 @@ const useStyles = makeStyles((theme: Theme) =>
       textAlign: 'center',
       cursor: 'pointer',
       bottom: '-82px',
-      left: '0px'
+      left: '0px',
+      [theme.breakpoints.down('sm')]: {
+        width: '190px',
+        fontSize: '35px',
+      },
+      [theme.breakpoints.down('xs')]: {
+        width: '135px',
+        height: '45px',
+        fontSize: '28px',
+        bottom: '-65px',
+        borderRadius: '13px',
+      }
     },
     mintDescription: {
       width: '253.7px',
@@ -144,7 +220,13 @@ const useStyles = makeStyles((theme: Theme) =>
       lineHeight: '21px',
       margin: 'auto',
       marginTop: '88.15px',
-      textAlign: 'center'
+      textAlign: 'center',
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '15px',
+      },
+      [theme.breakpoints.down('xs')]: {
+        fontSize: '14px',
+      }
     },
     mintDescriptionPadding: {
       paddingLeft: '90px',
@@ -162,7 +244,13 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: '32.3px',
       lineHeight: '44px',
       color: '#7BF4FC',
-      marginBottom: '6px'
+      marginBottom: '6px',
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '25px',
+      },
+      [theme.breakpoints.down('xs')]: {
+        fontSize: '20px',
+      }
     },
     mintText: {
       fontWeight: 600,
@@ -171,13 +259,20 @@ const useStyles = makeStyles((theme: Theme) =>
       color: '#FFFFFF',
       display: 'flex',
       justifyContent: 'flex-start',
-      marginBottom: '13px'
+      marginBottom: '13px',
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '14px',
+      },
+      [theme.breakpoints.down('xs')]: {
+        fontSize: '12px',
+      }
     },
     priceArea: {
       width: '90%',
       marginTop: '11px',
       marginBottom: '50px',
       [theme.breakpoints.down('sm')]: {
+        width: 'calc(100% - 60px)',
         paddingLeft: '30px',
         paddingRight: '30px',
       }
@@ -187,6 +282,9 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: '32px',
       lineHeight: '44px',
       color: '#FFD74A',
+      [theme.breakpoints.down('xs')]: {
+        fontSize: '24px',
+      }
     },
     priceInput: {
       width: '100%',
@@ -220,6 +318,9 @@ const useStyles = makeStyles((theme: Theme) =>
       fontSize: '32px',
       lineHeight: '44px',
       color: '#7165B2',
+      [theme.breakpoints.down('xs')]: {
+        fontSize: '24px',
+      }
     },
     remainingInput: {
       width: '100%',

@@ -35,6 +35,9 @@ export const CloudImage1 = styled.div`
   height: 57px;
   top: 230px;
   right: -220px;
+  @media (max-width: 1400px) {
+    display: none
+  }
 `
 
 export const CloudImage2 = styled.div`
@@ -47,6 +50,9 @@ export const CloudImage2 = styled.div`
   height: 51px;
   top: 450px;
   left: -190px;
+  @media (max-width: 1400px) {
+    display: none
+  }
 `
 
 export const CloudImage3 = styled.div`

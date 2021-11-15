@@ -11,6 +11,20 @@ export const FooterContainer = styled.div`
     color: #6C6C6C;
     text-align: center;
   }
+
+  @media (max-width: 576px) {
+    p {
+      font-size: 18px;
+    }
+  }
+
+  
+  @media (max-width: 330px) {
+    p {
+      font-size: 16px;
+    }
+  }
+
 `
 
 export const SocialIconWrapper = styled.div`

@@ -141,10 +141,12 @@ const useStyles = makeStyles((theme: Theme) =>
       position: 'absolute',
       width: '440px',
       height: '440px',
-      top: '47px'
+      top: '47px',
+      [theme.breakpoints.down('xs')]: {
+        width: '90%',
+        height: '90%',
+      },
     },
-
-
 
     roadmapContent: {
       position: 'relative',
@@ -234,12 +236,12 @@ const useStyles = makeStyles((theme: Theme) =>
       width: '100%',
       paddingLeft: '50px',
       [theme.breakpoints.down('xs')]: {
-        width: 'calc(100% - 60px)',
+        width: 'calc(100% - 40px)',
         paddingLeft: '20px',
         paddingRight: '20px',
       },
       [theme.breakpoints.down('sm')]: {
-        width: 'calc(100% - 60px)'
+        width: 'calc(100% - 40px)'
       },
     },
     rightTextItem: {
@@ -247,7 +249,10 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyContent: 'flex-start',
       margin: '15px',
       [theme.breakpoints.down('xs')]: {
-        margin: '10px',
+        margin: '5px 10px',
+      },
+      [theme.breakpoints.down('sm')]: {
+        margin: '5px 15px',
       },
     },
 
@@ -289,18 +294,28 @@ const useStyles = makeStyles((theme: Theme) =>
         width: 'calc(100% - 60px)'
       },
       [theme.breakpoints.down('xs')]: {
-        width: '100%',
+        width: 'calc(100% - 40px)',
         paddingLeft: '20px',
         paddingRight: '20px',
       },
     },
-
+    roadmapFifth: {
+      marginBottom: '32px'
+    },
     roadmapFooter: {
       width: '100%',
       display: 'flex',
       justifyContent: 'center',
       position: 'relative',
       marginBottom: '25px'
+    },
+    roadmapFooterMainImg: {
+      width: '545px', 
+      height: '252.4px',
+      [theme.breakpoints.down('xs')]: {
+        width: '100%', 
+        height: 'auto',
+      },
     },
     roadmapFooterLabelImageArea: {
       position: 'absolute',
@@ -343,7 +358,7 @@ const useStyles = makeStyles((theme: Theme) =>
         fontSize: '30px',
       },
       [theme.breakpoints.down('xs')]: {
-        fontSize: '23px',
+        fontSize: '20px',
       },
     }
   }),
@@ -706,11 +721,20 @@ export const RoadMap = () => {
             </Grid>
             <Grid item xs={12} sm={12} md={6}>
               <Box className={classes.rightTextWrapper}>
-                <Box className={classes.rightTextItem} style={{marginBottom: '32px'}}>
-                  <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
-                  <Typography className={classes.rightTextDetail}><span style={{background: '#e10fd1', color: '#ffffff', marginLeft: '-5px',  padding: '0px 5px', borderRadius: '1px'}}>3d
-                        </span> sol kitties sneak peeks</Typography>
-                </Box>
+                <Hidden smDown>
+                  <Box className={classes.rightTextItem} style={{marginBottom: '32px'}}>
+                    <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
+                    <Typography className={classes.rightTextDetail}><span style={{background: '#e10fd1', color: '#ffffff', marginLeft: '-5px',  padding: '0px 5px', borderRadius: '1px'}}>3d
+                          </span> sol kitties sneak peeks</Typography>
+                  </Box>
+                </Hidden>
+                <Hidden xsUp>
+                  <Box className={classes.rightTextItem}>
+                    <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
+                    <Typography className={classes.rightTextDetail}><span style={{background: '#e10fd1', color: '#ffffff', marginLeft: '-5px',  padding: '0px 5px', borderRadius: '1px'}}>3d
+                          </span> sol kitties sneak peeks</Typography>
+                  </Box>
+                </Hidden>
                 <Box className={classes.rightTextItem}>
                   <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
                   <Typography className={classes.rightTextDetail}><span style={{background: '#e10fd1', color: '#ffffff', marginLeft: '-5px',  padding: '0px 5px', borderRadius: '1px'}}>3d
@@ -740,7 +764,7 @@ export const RoadMap = () => {
         </Box>
 
         <Box className={classes.roadmapFooter}>
-          <img src='assets/images/2022.png' style={{width: '545px', height: '252.4px'}} alt='2022' />
+          <img src='assets/images/2022.png' className={classes.roadmapFooterMainImg} alt='2022' />
           <Box className={classes.roadmapFooterLabelImageArea}>
             <Box className={classes.roadmapFooterLabelImage}>
               <Typography className={classes.roadmapFooterLabel}>TO CAPTURE GAMING INDUSTRY!</Typography>

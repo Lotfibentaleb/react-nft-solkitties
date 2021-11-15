@@ -41,8 +41,8 @@ export const MyNavBar = () => {
       <div className='top-bar' id='navBar'>
         <div className='main-layout'>
           <div className='main-container display-flex-center'>
-            <div className='logo-main' onClick={() => handleGoSection('welcome')}>
-              <img className='logo' src={logo} alt='logo'/>
+            <div className='logo-main'>
+              <img className='logo' src={logo} alt='logo' onClick={() => handleGoSection('welcome')}/>
               <span className='logo-title'>Sol kittes</span>
             </div>
             <div style={{marginLeft: '43px'}}>
@@ -68,7 +68,7 @@ export const MyNavBar = () => {
           <MenuIcon />
         </div>
         <div className='logo-main'>
-          <img className='logo' src={logo} alt='logo'/>
+          <img className='logo' src={logo} alt='logo' onClick={() => handleGoSection('welcome')} />
           <span className='logo-title'>Sol kittes</span>
         </div>
         <div className='top-social'>
@@ -81,8 +81,8 @@ export const MyNavBar = () => {
         </div>
         <div className='sub-menu' style={{ width: isMenu ? '70%' : '0px'}}>
           <div>
-            <div className='logo-main' onClick={() => handleGoSection('welcome')}>
-              <img className='logo' src={logo} alt='logo'/>
+            <div className='logo-main'>
+              <img className='logo' src={logo} alt='logo' onClick={() => handleGoSection('welcome')}/>
               <span className='logo-title'>Sol kittes</span>
             </div>
             <div className="mobile-item" onClick={() => handleGoSection('welcome')}><span>Welcome</span></div>

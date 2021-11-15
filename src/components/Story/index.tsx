@@ -12,7 +12,8 @@ import {
   UserProfileWrapper,
   UserPhotoWrapper,
   ColorSection,
-  UserInfoWrapper
+  UserInfoWrapper,
+  HiddenRightPanel
 } from './styles'
 
 export const Story = () => {
@@ -28,6 +29,11 @@ export const Story = () => {
     <StoryContainer id='story'>
       <div className='main-layout'>
         <div className='main-container'>
+          <HiddenRightPanel>
+            <div>
+              <img src="assets/images/discord_area_avatar.png" style={{width: '100%', height: '100%'}}/>
+            </div>
+          </HiddenRightPanel>
           <YellowCircleBackgroundArea>
             <YelloCircleBackground></YelloCircleBackground>
             <JoinDiscordArea>

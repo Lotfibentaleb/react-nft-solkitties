@@ -128,7 +128,7 @@
 
 @media (min-width: 250px) {
   .top-section {
-    text-align: center;
+    text-align: left;
     padding: 45px 20px 30px 20px;
   }
 
@@ -141,16 +141,10 @@
   .welcome-desc{
     font-size: 15px;
   }
-
   .sale {
-    text-align: center;
-  }
-  .sale-time {
-    margin-left: calc((100vw - 290px)/2);
-  }
-  .sale-desc {
+    text-align: left;
     padding-left: 20px;
-    padding-right: 20px;
+    width: calc(100% - 30px);
   }
   .sale-image {
     padding: 0;
@@ -171,7 +165,7 @@
 
 @media (min-width: 600px) {
   .top-section {
-    text-align: center;
+    text-align: left;
     padding: 45px 40px 30px 40px;
   }
 
@@ -186,14 +180,9 @@
   }
 
   .sale {
-    text-align: center;
-  }
-  .sale-time {
-    margin-left: calc((100vw - 290px)/2);
-  }
-  .sale-desc {
-    padding-left: 20px;
-    padding-right: 20px;
+    text-align: left;
+    padding-left: 40px;
+    width: calc(100% - 50px);
   }
   .sale-image {
     padding: 0;

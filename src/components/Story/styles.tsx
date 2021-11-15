@@ -146,6 +146,23 @@ export const JoinButton = styled.div`
   line-height: 48px;
 `
 
+export const HiddenRightPanel = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: -50px;
+
+  > div {
+    width: 70%;
+    height: 70%;
+  }
+
+  @media (min-width: 693px) {
+    display: none;
+  }
+`
+
+
 export const DiscordRightPanel = styled.div`
   display: flex;
   justify-content: center;
@@ -191,8 +208,12 @@ export const UserListWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
 
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+
   > div {
-    width: calc(100% - 30px);
+    width: 80%;
 
     @media (min-width: 768px) {
       width: calc(50% - 30px);

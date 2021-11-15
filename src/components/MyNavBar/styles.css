@@ -15,15 +15,26 @@
 	justify-content: center;
 }
 
+.logo {
+	cursor: pointer;
+}
+
 @media (min-width: 200px) {
 	.main-container {
 		width: 100%;
+	}
+	.logo {
+		cursor: pointer;
 	}
 }
 
 @media (min-width: 870px) {
 	.main-container {
 		width: 100%;
+	}
+	
+	.logo {
+		cursor: pointer;
 	}
 }
 
@@ -55,6 +66,10 @@
 	}
 	.top-mr {
 		margin-right: 15px;
+	}
+	
+	.logo {
+		cursor: pointer;
 	}
 }
 .top-menu {
@@ -153,7 +168,9 @@
 		margin: 8px 10px;
 		width: 55px;
 	}
-
+	.logo {
+		cursor: pointer;
+	}
 	.logo-title {
 		margin: 0px;
 	}
@@ -175,9 +192,12 @@
 	.top-mr {
 		margin-right: 30px;
 	}
+	.logo {
+		cursor: pointer;
+	}
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
 	.main-container {
 		width: 970px;
 	}
@@ -192,5 +212,8 @@
 	}
 	.top-mr {
 		margin-right: 35px;
+	}
+	.logo {
+		cursor: pointer;
 	}
 }

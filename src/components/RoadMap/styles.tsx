@@ -476,9 +476,17 @@ export const GalleryWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   position: relative;
+  justify-content: center;
+  background: linear-gradient(
+    180deg,#6BCFFF 0%,#9CDFFF 100%);
 
   > img {
-    width: 100%;
+    width: 70%;
+
+    @media (min-width: 200px) {
+      width: 70%;
+      justify-content: center;
+    }
 
     @media (min-width: 576px) {
       width: 33.33%;
