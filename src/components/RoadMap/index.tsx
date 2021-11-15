@@ -238,6 +238,9 @@ const useStyles = makeStyles((theme: Theme) =>
         paddingLeft: '20px',
         paddingRight: '20px',
       },
+      [theme.breakpoints.down('sm')]: {
+        width: 'calc(100% - 60px)'
+      },
     },
     rightTextItem: {
       display: 'flex',
@@ -283,6 +286,7 @@ const useStyles = makeStyles((theme: Theme) =>
       position: 'relative',
       [theme.breakpoints.down('sm')]: {
         paddingLeft: '50px',
+        width: 'calc(100% - 60px)'
       },
       [theme.breakpoints.down('xs')]: {
         width: '100%',
@@ -381,7 +385,7 @@ export const RoadMap = () => {
 
   return (
     <>
-    <Box className={classes.root}>
+    <Box className={classes.root} id='roadmap'>
       <Box className={classes.mainContainser}>
         <Box className={classes.solanaAvatarRow}>
           <Box className={classes.solanaAvatarBox}>

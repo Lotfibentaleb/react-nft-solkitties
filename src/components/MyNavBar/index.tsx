@@ -49,7 +49,8 @@ export const MyNavBar = () => {
               <span className='top-menu top-mr' onClick={() => handleChangePage('/minting')}>Minting</span>
               <span className='top-menu top-mr' onClick={() => handleGoSection('roadmap')}>Roadmap</span>
               <span className='top-menu top-mr' onClick={() => handleGoSection('story')}>Story</span>
-              <span className='top-menu' onClick={() => handleGoSection('faq')}>FAQ</span>
+              <span className='top-menu top-mr' onClick={() => handleGoSection('faq')}>FAQ</span>
+              <a href='http://www.kobgames.com' style={{textDecoration: 'none'}}><span className='top-menu'> Welcome</span></a>
             </div>
             <div className='top-social'>
               <a href='https://twitter.com/'>
@@ -88,6 +89,7 @@ export const MyNavBar = () => {
             <div className="mobile-item" onClick={() => handleGoSection('roadmap')}><span>Roadmap</span></div>
             <div className="mobile-item" onClick={() => handleGoSection('story')}><span>Story</span></div>
             <div className="mobile-item" onClick={() => handleGoSection('faq')}><span>Faq</span></div>
+            <a href='http://www.kobgames.com' style={{textDecoration: 'none'}}><div className='mobile-item'>Welcome</div></a>
           </div>
         </div>
         {isMenu && (
