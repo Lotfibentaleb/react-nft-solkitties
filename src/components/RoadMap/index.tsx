@@ -401,8 +401,7 @@ export const RoadMap = () => {
   const responsiveImageList = [
     { id: 1, title: '1', url: 'assets/images/1.png' },
     { id: 2, title: '2', url: 'assets/images/2.png' },
-    { id: 3, title: '3', url: 'assets/images/3.png' },
-    { id: 4, title: '4', url: 'assets/images/5.png' }
+    { id: 3, title: '3', url: 'assets/images/3.png' }
   ]
 
   return (
