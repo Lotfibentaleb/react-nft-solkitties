@@ -136,14 +136,19 @@ export const JoinButton = styled.div`
   background: #FFA800;
   border-radius: 16px;
   cursor: pointer;
-  
-  color: #15193B!important;
-  text-align: center;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 35px;
-  line-height: 48px;
+  display: flex;
+  justify-content: center;
+
+  > p {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 48px;
+    color: #15193B;
+    margin-top: 6px;
+    
+  }
 `
 
 export const HiddenRightPanel = styled.div`

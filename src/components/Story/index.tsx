@@ -48,7 +48,7 @@ export const Story = () => {
                   Giveaways everyday until our launch !
                 </p>
                 <JoinButton>
-                  JOIN
+                  <p>JOIN</p>
                 </JoinButton>
               </DiscordLeftPanel>
               <DiscordRightPanel>
