@@ -398,6 +398,13 @@ export const RoadMap = () => {
     { id: 27, title: '7', url: 'assets/images/7.png' },
   ]
 
+  const responsiveImageList = [
+    { id: 1, title: '1', url: 'assets/images/1.png' },
+    { id: 2, title: '2', url: 'assets/images/2.png' },
+    { id: 3, title: '3', url: 'assets/images/3.png' },
+    { id: 4, title: '4', url: 'assets/images/5.png' }
+  ]
+
   return (
     <>
     <Box className={classes.root} id='roadmap'>
@@ -774,11 +781,21 @@ export const RoadMap = () => {
       </Box>
     </Box>
      
-    <GalleryWrapper>
-      {imageList.map((item, i) => (
-        <img src={item.url} alt={item.title} key={i} />
-      ))}
-    </GalleryWrapper>
+    <Hidden xsDown>
+      <GalleryWrapper>
+        {imageList.map((item, i) => (
+          <img src={item.url} alt={item.title} key={i} />
+        ))}
+      </GalleryWrapper>
+    </Hidden>
+    <Hidden smUp>
+      <GalleryWrapper>
+        {responsiveImageList.map((item, i) => (
+          <img src={item.url} alt={item.title} key={i} />
+        ))}
+      </GalleryWrapper>
+    </Hidden>
+
     </>
   )
 }

@@ -268,11 +268,11 @@ const useStyles = makeStyles((theme: Theme) =>
       }
     },
     priceArea: {
-      width: '90%',
+      width: '80%',
       marginTop: '11px',
       marginBottom: '50px',
       [theme.breakpoints.down('sm')]: {
-        width: 'calc(100% - 60px)',
+        width: 'calc(100% - 70px)',
         paddingLeft: '30px',
         paddingRight: '30px',
       }
