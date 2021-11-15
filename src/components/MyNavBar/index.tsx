@@ -41,16 +41,16 @@ export const MyNavBar = () => {
       <div className='top-bar' id='navBar'>
         <div className='main-layout'>
           <div className='main-container display-flex-center'>
-            <div className='logo-main'>
+            <div className='logo-main' onClick={() => handleGoSection('welcome')}>
               <img className='logo' src={logo} alt='logo'/>
               <span className='logo-title'>Sol kittes</span>
             </div>
             <div style={{marginLeft: '43px'}}>
+              <span className='top-menu top-mr' onClick={() => handleGoSection('welcome')}>Welcome</span>
               <span className='top-menu top-mr' onClick={() => handleChangePage('/minting')}>Minting</span>
               <span className='top-menu top-mr' onClick={() => handleGoSection('roadmap')}>Roadmap</span>
               <span className='top-menu top-mr' onClick={() => handleGoSection('story')}>Story</span>
               <span className='top-menu top-mr' onClick={() => handleGoSection('faq')}>FAQ</span>
-              <a href='http://www.kobgames.com' style={{textDecoration: 'none'}}><span className='top-menu'> Welcome</span></a>
             </div>
             <div className='top-social'>
               <a href='https://twitter.com/'>
@@ -81,15 +81,15 @@ export const MyNavBar = () => {
         </div>
         <div className='sub-menu' style={{ width: isMenu ? '70%' : '0px'}}>
           <div>
-            <div className='logo-main'>
+            <div className='logo-main' onClick={() => handleGoSection('welcome')}>
               <img className='logo' src={logo} alt='logo'/>
               <span className='logo-title'>Sol kittes</span>
             </div>
+            <div className="mobile-item" onClick={() => handleGoSection('welcome')}><span>Welcome</span></div>
             <div className="mobile-item"  onClick={() => handleChangePage('/minting')}><span>Minting</span></div>
             <div className="mobile-item" onClick={() => handleGoSection('roadmap')}><span>Roadmap</span></div>
             <div className="mobile-item" onClick={() => handleGoSection('story')}><span>Story</span></div>
             <div className="mobile-item" onClick={() => handleGoSection('faq')}><span>Faq</span></div>
-            <a href='http://www.kobgames.com' style={{textDecoration: 'none'}}><div className='mobile-item'>Welcome</div></a>
           </div>
         </div>
         {isMenu && (

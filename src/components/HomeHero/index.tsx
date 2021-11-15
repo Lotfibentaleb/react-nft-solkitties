@@ -29,7 +29,7 @@ export const HomeHero = () => {
   }, [])
 
   return (
-    <div className='home-hero'>
+    <div className='home-hero' id='welcome'>
       <div className='main-layout'>
         <div className='main-container'>
           <div className='top-section'>

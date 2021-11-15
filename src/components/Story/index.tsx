@@ -39,7 +39,7 @@ export const Story = () => {
                   JOIN OUR DISCORD
                 </div>
                 <p>
-                  Giveaways everyday untill our launch !
+                  Giveaways everyday until our launch !
                 </p>
                 <JoinButton>
                   JOIN
