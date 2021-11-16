@@ -43,13 +43,19 @@ export const StoryContainer = styled.div`
 export const YellowCircleBackgroundArea = styled.div`
   position: relative;
   margin-top: 130px;
-  margin-bottom:60px;
+  margin-bottom: 60px;
   width: 100%;
   height: 370px;
   width: 100%;
   height: 370px;
   @media (max-width: 900px) {
     margin-top: 0px;
+  }
+  @media (min-width: 250px) {
+    margin-bottom: 0px;
+  }
+  @media (min-width: 900px) {
+    margin-bottom: 60px;
   }
 `
 

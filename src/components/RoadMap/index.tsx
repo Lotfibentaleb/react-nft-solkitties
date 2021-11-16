@@ -67,13 +67,7 @@ const useStyles = makeStyles((theme: Theme) =>
       height: '1570px',
       opacity: 0.5,
       background: '#ffffff',
-      top: '150px',
-      [theme.breakpoints.down('sm')]: {
-        height: '1960px',
-      },
-      [theme.breakpoints.down('xs')]: {
-        height: '1980px',
-      },
+      top: '150px'
     },
     roadmapHeaderCenterImageShadow: {
       position: 'absolute',
@@ -161,7 +155,30 @@ const useStyles = makeStyles((theme: Theme) =>
       width: '100%',
       marginTop: '100px',
       [theme.breakpoints.down('sm')]: {
-        marginTop: '200px',
+        marginTop: '110px',
+      },
+    },
+    firstRoadmap: {
+      [theme.breakpoints.down('sm')]: {
+        marginTop: '170px',
+      },
+    },
+    thirdRoadmap: {
+      marginTop: '70px',
+      [theme.breakpoints.down('sm')]: {
+        marginTop: '110px',
+      },
+    },
+    fourthRoadmap: {
+      marginTop: '80px',
+      [theme.breakpoints.down('sm')]: {
+        marginTop: '110px',
+      },
+    },
+    fifthRoadmap: {
+      marginTop: '155px',
+      [theme.breakpoints.down('sm')]: {
+        marginTop: '110px',
       },
     },
     roadmapContentCenterImage: {
@@ -173,12 +190,16 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyContent: 'center',
       top: '-25px',
       [theme.breakpoints.down('sm')]: {
-        top: '-135px',
+        top: '-105px',
       },
     },
     roadmapCenterImageSize: {
       width: '91px',
-      height: '124px'
+      height: '124px',
+      [theme.breakpoints.down('sm')]: {
+        width: '70px',
+        height: '95px',
+      },
     },
     responsiveRightMonth: {
       display: 'flex',
@@ -440,7 +461,7 @@ export const RoadMap = () => {
         </Box>
 
 {/** roadmap 1 */}
-        <Box className={classes.roadmapContent}>
+        <Box className={`${classes.roadmapContent} ${classes.firstRoadmap}`}>
           <Box className={classes.roadmapContentCenterImage}>
             <img src='/assets/images/line-image-1.png' className={classes.roadmapCenterImageSize}/>
           </Box>
@@ -542,7 +563,7 @@ export const RoadMap = () => {
 
 {/** roadmap 3 */}
         <Hidden smDown>
-          <Box className={classes.roadmapContent} style={{marginTop: '70px'}}>
+          <Box className={`${classes.roadmapContent} ${classes.thirdRoadmap}`}>
             <Box className={classes.roadmapContentCenterImage}>
               <img src='/assets/images/line-image-3.png' className={classes.roadmapCenterImageSize} />
             </Box>
@@ -586,7 +607,7 @@ export const RoadMap = () => {
         </Hidden>
 
         <Hidden mdUp>
-          <Box className={classes.roadmapContent} style={{marginTop: '170px'}}>
+          <Box className={classes.roadmapContent}>
             <Box className={classes.roadmapContentCenterImage}>
               <img src='/assets/images/line-image-3.png' className={classes.roadmapCenterImageSize} />
             </Box>
@@ -631,7 +652,7 @@ export const RoadMap = () => {
 
 {/** roadmap 4 */}
       <Hidden smDown>
-        <Box className={classes.roadmapContent} style={{marginTop: '80px'}}>
+        <Box className={`${classes.roadmapContent} ${classes.fourthRoadmap}`}>
           <Box className={classes.roadmapContentCenterImage}>
             <img src='/assets/images/line-image-4.png' className={classes.roadmapCenterImageSize} />
           </Box>
@@ -718,7 +739,7 @@ export const RoadMap = () => {
 
 
 {/** roadmap 5 */}
-        <Box className={classes.roadmapContent} style={{marginTop: '155px'}}>
+        <Box className={`${classes.roadmapContent} ${classes.fifthRoadmap}`}>
           <Box className={classes.roadmapContentCenterImage}>
             <img src='/assets/images/line-image-5.png' className={classes.roadmapCenterImageSize} />
           </Box>

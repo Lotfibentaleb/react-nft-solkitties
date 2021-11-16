@@ -200,6 +200,12 @@
 	}
 }
 
+@media (min-width: 970px) {
+	.main-container {
+		width: 970px;
+	}
+}
+
 @media (min-width: 1200px) {
 	.main-container {
 		width: 970px;

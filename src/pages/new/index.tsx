@@ -9,7 +9,7 @@ import { Footer } from '../../components/Footer';
 
 const NewPage = () => {
   return (
-    <div style={{background: 'white'}}>
+    <div style={{background: 'linear-gradient(180deg, #224F93 0%, #161131 78.83%)'}}>
       <MyNavBar />
       <HomeHero />
       <RoadMap />
