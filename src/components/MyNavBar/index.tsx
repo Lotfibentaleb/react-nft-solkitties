@@ -43,7 +43,7 @@ export const MyNavBar = () => {
           <div className='main-container display-flex-center'>
             <div className='logo-main'>
               <img className='logo' src={logo} alt='logo' onClick={() => handleGoSection('welcome')}/>
-              <span className='logo-title'>Sol kittes</span>
+              <span className='logo-title' onClick={() => handleGoSection('welcome')}>Sol kittes</span>
             </div>
             <div style={{marginLeft: '43px'}}>
               <span className='top-menu top-mr' onClick={() => handleGoSection('welcome')}>Welcome</span>
@@ -69,7 +69,7 @@ export const MyNavBar = () => {
         </div>
         <div className='logo-main'>
           <img className='logo' src={logo} alt='logo' onClick={() => handleGoSection('welcome')} />
-          <span className='logo-title'>Sol kittes</span>
+          <span className='logo-title' onClick={() => handleGoSection('welcome')}>Sol kittes</span>
         </div>
         <div className='top-social'>
           <a href='https://twitter.com/SolKitties' target="_blank">
@@ -83,7 +83,7 @@ export const MyNavBar = () => {
           <div>
             <div className='logo-main'>
               <img className='logo' src={logo} alt='logo' onClick={() => handleGoSection('welcome')}/>
-              <span className='logo-title'>Sol kittes</span>
+              <span className='logo-title' onClick={() => handleGoSection('welcome')}>Sol kittes</span>
             </div>
             <div className="mobile-item" onClick={() => handleGoSection('welcome')}><span>Welcome</span></div>
             <div className="mobile-item"  onClick={() => handleChangePage('/minting')}><span>Minting</span></div>
