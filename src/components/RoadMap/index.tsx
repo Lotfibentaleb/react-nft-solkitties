@@ -67,7 +67,10 @@ const useStyles = makeStyles((theme: Theme) =>
       height: '1570px',
       opacity: 0.5,
       background: '#ffffff',
-      top: '150px'
+      top: '150px',
+      [theme.breakpoints.down('sm')]: {
+        height: '1995px',
+      },
     },
     roadmapHeaderCenterImageShadow: {
       position: 'absolute',
@@ -155,30 +158,30 @@ const useStyles = makeStyles((theme: Theme) =>
       width: '100%',
       marginTop: '100px',
       [theme.breakpoints.down('sm')]: {
-        marginTop: '110px',
+        marginTop: '190px',
       },
     },
     firstRoadmap: {
       [theme.breakpoints.down('sm')]: {
-        marginTop: '170px',
+        marginTop: '220px',
       },
     },
     thirdRoadmap: {
       marginTop: '70px',
       [theme.breakpoints.down('sm')]: {
-        marginTop: '110px',
+        marginTop: '190px',
       },
     },
     fourthRoadmap: {
       marginTop: '80px',
       [theme.breakpoints.down('sm')]: {
-        marginTop: '110px',
+        marginTop: '190px',
       },
     },
     fifthRoadmap: {
       marginTop: '155px',
       [theme.breakpoints.down('sm')]: {
-        marginTop: '110px',
+        marginTop: '190px',
       },
     },
     roadmapContentCenterImage: {
@@ -190,7 +193,7 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyContent: 'center',
       top: '-25px',
       [theme.breakpoints.down('sm')]: {
-        top: '-105px',
+        top: '-155px',
       },
     },
     roadmapCenterImageSize: {
