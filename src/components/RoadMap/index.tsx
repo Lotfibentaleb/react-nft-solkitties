@@ -165,8 +165,12 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyContent: 'center',
       top: '-25px',
       [theme.breakpoints.down('sm')]: {
-        top: '-130px',
+        top: '-135px',
       },
+    },
+    roadmapCenterImageSize: {
+      width: '91px',
+      height: '124px'
     },
     responsiveRightMonth: {
       display: 'flex',
@@ -438,7 +442,7 @@ export const RoadMap = () => {
 {/** roadmap 1 */}
         <Box className={classes.roadmapContent}>
           <Box className={classes.roadmapContentCenterImage}>
-            <img src='/assets/images/line-image-1.png' />
+            <img src='/assets/images/line-image-1.png' className={classes.roadmapCenterImageSize}/>
           </Box>
           <Grid container>
             <Grid item xs={12} sm={12} md={6} className={classes.responsiveRightMonth}>
@@ -466,7 +470,7 @@ export const RoadMap = () => {
         <Hidden smDown>
           <Box className={classes.roadmapContent}>
             <Box className={classes.roadmapContentCenterImage}>
-              <img src='/assets/images/line-image-2.png' />
+              <img src='/assets/images/line-image-2.png' className={classes.roadmapCenterImageSize}/>
             </Box>
             <Grid container>
               <Grid item sm={6} md={6}>
@@ -502,7 +506,7 @@ export const RoadMap = () => {
         <Hidden mdUp>
           <Box className={classes.roadmapContent}>
             <Box className={classes.roadmapContentCenterImage}>
-              <img src='/assets/images/line-image-2.png' />
+              <img src='/assets/images/line-image-2.png' className={classes.roadmapCenterImageSize} />
             </Box>
             <Grid container>
               <Grid item sm={12} md={6} className={classes.responsiveRightMonth}>
@@ -540,7 +544,7 @@ export const RoadMap = () => {
         <Hidden smDown>
           <Box className={classes.roadmapContent} style={{marginTop: '70px'}}>
             <Box className={classes.roadmapContentCenterImage}>
-              <img src='/assets/images/line-image-3.png' />
+              <img src='/assets/images/line-image-3.png' className={classes.roadmapCenterImageSize} />
             </Box>
             <Grid container>
               <Grid item xs={12} sm={12} md={6} className={classes.responsiveRightMonth}>
@@ -584,7 +588,7 @@ export const RoadMap = () => {
         <Hidden mdUp>
           <Box className={classes.roadmapContent} style={{marginTop: '170px'}}>
             <Box className={classes.roadmapContentCenterImage}>
-              <img src='/assets/images/line-image-3.png' />
+              <img src='/assets/images/line-image-3.png' className={classes.roadmapCenterImageSize} />
             </Box>
             <Grid container>
               <Grid item xs={12} sm={12} md={6} className={classes.responsiveRightMonth}>
@@ -629,7 +633,7 @@ export const RoadMap = () => {
       <Hidden smDown>
         <Box className={classes.roadmapContent} style={{marginTop: '80px'}}>
           <Box className={classes.roadmapContentCenterImage}>
-            <img src='/assets/images/line-image-4.png' />
+            <img src='/assets/images/line-image-4.png' className={classes.roadmapCenterImageSize} />
           </Box>
           <Grid container>
             <Grid item sm={6} md={6}>
@@ -672,7 +676,7 @@ export const RoadMap = () => {
       <Hidden mdUp>
         <Box className={classes.roadmapContent}>
           <Box className={classes.roadmapContentCenterImage}>
-            <img src='/assets/images/line-image-4.png' />
+            <img src='/assets/images/line-image-4.png' className={classes.roadmapCenterImageSize} />
           </Box>
           <Grid container>
             <Grid item sm={12} md={6} className={classes.responsiveRightMonth}>
@@ -716,7 +720,7 @@ export const RoadMap = () => {
 {/** roadmap 5 */}
         <Box className={classes.roadmapContent} style={{marginTop: '155px'}}>
           <Box className={classes.roadmapContentCenterImage}>
-            <img src='/assets/images/line-image-5.png' />
+            <img src='/assets/images/line-image-5.png' className={classes.roadmapCenterImageSize} />
           </Box>
           <Grid container>
             <Grid item xs={12} sm={12} md={6} className={classes.responsiveRightMonth}>
