@@ -64,7 +64,10 @@ const useStyles = makeStyles((theme: Theme) =>
       background: '#ffffff',
       top: '150px',
       [theme.breakpoints.down('sm')]: {
-        height: '2050px',
+        height: '1960px',
+      },
+      [theme.breakpoints.down('xs')]: {
+        height: '1980px',
       },
     },
     roadmapHeaderCenterImageShadow: {
@@ -262,15 +265,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
     textLeftImage: {
       width: '28px', 
-      height: '28px',
-      // [theme.breakpoints.down('sm')]: {
-      //   width: '24px',
-      //   height: '24px'
-      // },
-      // [theme.breakpoints.down('xs')]: {
-      //   width: '18px',
-      //   height: '18px'
-      // },
+      height: '28px'
     },
 
     rightTextDetail: {
@@ -791,13 +786,13 @@ export const RoadMap = () => {
         ))}
       </GalleryWrapper>
     </Hidden>
-    <Hidden smUp>
+    {/* <Hidden smUp>
       <GalleryWrapper>
         {responsiveImageList.map((item, i) => (
           <img src={item.url} alt={item.title} key={i} />
         ))}
       </GalleryWrapper>
-    </Hidden>
+    </Hidden> */}
 
     </>
   )
