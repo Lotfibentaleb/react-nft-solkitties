@@ -32,8 +32,8 @@ export const Footer = () => {
     <>
       <FooterContainer>
         <SocialIconWrapper>
-          <img src='assets/images/twitter.png' alt='twitter' onClick={() => redirectSite('https://twitter.com/')} />
-          <img src='assets/images/discord.png' alt='discord' onClick={() => redirectSite('https://discord.com/')} />
+          <img src='assets/images/twitter.png' alt='twitter' onClick={() => redirectSite('https://twitter.com/SolKitties')} />
+          <img src='assets/images/discord.png' alt='discord' onClick={() => redirectSite('https://discord.gg/7Hg6rHbkke')} />
         </SocialIconWrapper>
         <p>All rights reserved © Sol Kitties 2021</p>
       </FooterContainer>

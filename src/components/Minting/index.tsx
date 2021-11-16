@@ -412,7 +412,7 @@ export const Minting = () => {
                     <Box className={classes.priceArea}>
                       <Box className={classes.priceLabel}>Price</Box>
                       <Box className={classes.priceInput}>
-                        <input className={classes.priceInputBox} />
+                        <input className={classes.priceInputBox} placeholder='1 SOL' />
                       </Box>
                       <Box className={classes.priceGas}>+ gas fee</Box>
                     </Box>
@@ -421,7 +421,7 @@ export const Minting = () => {
                     <Box className={classes.priceArea}>
                       <Box className={classes.remainingLabel}>Remaining</Box>
                       <Box className={classes.remainingInput}>
-                        <input className={classes.priceInputBox} />
+                        <input className={classes.priceInputBox} placeholder='3,080' />
                       </Box>
                     </Box>
                   </Grid>
@@ -470,7 +470,7 @@ export const Minting = () => {
                     <Box className={classes.priceArea}>
                       <Box className={classes.priceLabel}>Price</Box>
                       <Box className={classes.priceInput}>
-                        <input className={classes.priceInputBox} />
+                        <input className={classes.priceInputBox} placeholder='1 SOL'/>
                       </Box>
                       <Box className={classes.priceGas}>+ gas fee</Box>
                     </Box>
@@ -479,7 +479,7 @@ export const Minting = () => {
                     <Box className={classes.priceArea}>
                       <Box className={classes.remainingLabel}>Remaining</Box>
                       <Box className={classes.remainingInput}>
-                        <input className={classes.priceInputBox} />
+                        <input className={classes.priceInputBox} placeholder='3,080' />
                       </Box>
                     </Box>
                   </Grid>

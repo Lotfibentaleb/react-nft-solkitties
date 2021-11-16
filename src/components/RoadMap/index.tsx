@@ -36,8 +36,8 @@ const useStyles = makeStyles((theme: Theme) =>
       justifyContent: 'flex-end',
       [theme.breakpoints.down('md')]: {
         justifyContent: 'center',
-        marginTop: '0px',
-    },
+        marginTop: '-20px',
+      },
     },
     solanaAvatarBox: {
       width: '158px',
@@ -56,7 +56,10 @@ const useStyles = makeStyles((theme: Theme) =>
       height: '52px',
       display: 'flex',
       justifyContent: 'center',
-      marginTop: '89px'
+      marginTop: '110px',
+      [theme.breakpoints.down('md')]: {
+        marginTop: '89px',
+      },
     },
     roadmapHeaderCenterLine: {
       position: 'absolute',
