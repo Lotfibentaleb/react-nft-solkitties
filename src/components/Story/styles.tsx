@@ -48,6 +48,9 @@ export const YellowCircleBackgroundArea = styled.div`
   height: 370px;
   width: 100%;
   height: 370px;
+  @media (max-width: 900px) {
+    margin-top: 0px;
+  }
 `
 
 export const JoinDiscordArea = styled.div`
