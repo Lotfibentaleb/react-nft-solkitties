@@ -12,7 +12,7 @@ export const HomeHero = () => {
   useEffect(() => {
     const myfunc = setInterval(function() {
       const now = new Date().getTime();
-      const downDate = new Date("Nov 18, 2021 16:37:52").getTime()
+      const downDate = new Date("Dec 2, 2021 16:37:52").getTime()
       var timeleft = downDate - now;
           
       const days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
