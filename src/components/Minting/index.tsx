@@ -243,7 +243,6 @@ const useStyles = makeStyles((theme: Theme) =>
       [theme.breakpoints.down('sm')]: {
         paddingLeft: '30px',
         paddingRight: '30px',
-        marginTop: '80px',
         marginBottom: '50px',
       }
     },
@@ -283,6 +282,7 @@ const useStyles = makeStyles((theme: Theme) =>
         width: 'calc(100% - 70px)',
         paddingLeft: '30px',
         paddingRight: '30px',
+        marginBottom: '0px',
       }
     },
     priceLabel: {
@@ -344,7 +344,6 @@ const useStyles = makeStyles((theme: Theme) =>
       width: '100%',
       display: 'flex',
       justifyContent: 'center',
-      marginBottom: '50px'
     },
     solana: {
       marginTop: '50px',
@@ -406,6 +405,38 @@ export const Minting = () => {
               <Box className={classes.mintDescription}>Max 20 per tansaction. Need more? Just repeat.</Box>
             </Grid>
             
+            <Hidden lgUp>
+              <Grid item lg={5} sm={12} md={12} xs={12}>
+                <Grid container>
+                  <Grid item lg={6} md={6} sm={12} xs={12}>
+                    <Box className={classes.priceArea}>
+                      <Box className={classes.priceLabel}>Price</Box>
+                      <Box className={classes.priceInput}>
+                        <input className={classes.priceInputBox} />
+                      </Box>
+                      <Box className={classes.priceGas}>+ gas fee</Box>
+                    </Box>
+                  </Grid>
+                  <Grid item lg={6} md={6} sm={12} xs={12}>
+                    <Box className={classes.priceArea}>
+                      <Box className={classes.remainingLabel}>Remaining</Box>
+                      <Box className={classes.remainingInput}>
+                        <input className={classes.priceInputBox} />
+                      </Box>
+                    </Box>
+                  </Grid>
+                </Grid>
+              </Grid>
+              <Grid item lg={7} sm={12} md={12} xs={12}>
+                <Box className={classes.solanaAvatarArea}>
+                  <Box className={classes.solana}>
+                    <Typography style={{fontFamily: 'Orbitron', fontSize: '10.65px'}}>POWERED BY</Typography>
+                    <img src='assets/images/solana-avatar.png' style={{width: '158px', height: '30px'}} />
+                  </Box>
+                </Box>
+              </Grid>
+            </Hidden>
+
             <Grid item lg={7} className={classes.mintDescriptionPadding} md={12} sm={12} xs={12}>
               <Typography className={classes.howToMint}>HOW TO MINT ?</Typography>
               <Box className={classes.mintText}>
@@ -431,37 +462,39 @@ export const Minting = () => {
             </Grid>
           </Grid>
 
-          <Grid container>
-            <Grid item lg={5} sm={12} md={12} xs={12}>
-              <Grid container>
-                <Grid item lg={6} sm={12} md={12} xs={12}>
-                  <Box className={classes.priceArea}>
-                    <Box className={classes.priceLabel}>Price</Box>
-                    <Box className={classes.priceInput}>
-                      <input className={classes.priceInputBox} />
+          <Hidden mdDown>
+            <Grid container>
+              <Grid item lg={5} sm={12} md={12} xs={12}>
+                <Grid container>
+                  <Grid item lg={6} sm={12} md={12} xs={12}>
+                    <Box className={classes.priceArea}>
+                      <Box className={classes.priceLabel}>Price</Box>
+                      <Box className={classes.priceInput}>
+                        <input className={classes.priceInputBox} />
+                      </Box>
+                      <Box className={classes.priceGas}>+ gas fee</Box>
                     </Box>
-                    <Box className={classes.priceGas}>+ gas fee</Box>
-                  </Box>
-                </Grid>
-                <Grid item lg={6} sm={12} md={12} xs={12}>
-                  <Box className={classes.priceArea}>
-                    <Box className={classes.remainingLabel}>Remaining</Box>
-                    <Box className={classes.remainingInput}>
-                      <input className={classes.priceInputBox} />
+                  </Grid>
+                  <Grid item lg={6} sm={12} md={12} xs={12}>
+                    <Box className={classes.priceArea}>
+                      <Box className={classes.remainingLabel}>Remaining</Box>
+                      <Box className={classes.remainingInput}>
+                        <input className={classes.priceInputBox} />
+                      </Box>
                     </Box>
-                  </Box>
+                  </Grid>
                 </Grid>
               </Grid>
-            </Grid>
-            <Grid item lg={7} sm={12} md={12} xs={12}>
-              <Box className={classes.solanaAvatarArea}>
-                <Box className={classes.solana}>
-                  <Typography style={{fontFamily: 'Orbitron', fontSize: '10.65px'}}>POWERED BY</Typography>
-                  <img src='assets/images/solana-avatar.png' style={{width: '158px', height: '30px'}} />
+              <Grid item lg={7} sm={12} md={12} xs={12}>
+                <Box className={classes.solanaAvatarArea}>
+                  <Box className={classes.solana}>
+                    <Typography style={{fontFamily: 'Orbitron', fontSize: '10.65px'}}>POWERED BY</Typography>
+                    <img src='assets/images/solana-avatar.png' style={{width: '158px', height: '30px'}} />
+                  </Box>
                 </Box>
-              </Box>
+              </Grid>
             </Grid>
-          </Grid>
+          </Hidden>
         </div>
       </div>
     </div>
