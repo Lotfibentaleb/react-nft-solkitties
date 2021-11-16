@@ -192,24 +192,32 @@ const useStyles = makeStyles((theme: Theme) =>
       height: '61.85px',
       background: '#FFD029',
       borderRadius: '16px',
-      fontWeight: 'bold',
-      fontSize: '39px',
-      lineHeight: '53px',
-      color: '#161131',
-      textAlign: 'center',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
       cursor: 'pointer',
       bottom: '-82px',
       left: '0px',
       [theme.breakpoints.down('sm')]: {
         width: '190px',
-        fontSize: '35px',
       },
       [theme.breakpoints.down('xs')]: {
         width: '135px',
         height: '45px',
-        fontSize: '28px',
         bottom: '-65px',
         borderRadius: '13px',
+      }
+    },
+    mintButtonLabel: {
+      fontWeight: 'bold',
+      fontSize: '39px',
+      lineHeight: '53px',
+      color: '#161131',
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '35px',
+      },
+      [theme.breakpoints.down('xs')]: {
+        fontSize: '28px',
       }
     },
     mintDescription: {
@@ -390,7 +398,9 @@ export const Minting = () => {
                     <Typography className={classes.askText}>?</Typography>
                   </Box>
                 </Box>
-                <Box className={classes.mintButton}>Mint</Box>
+                <Box className={classes.mintButton}>
+                  <Typography className={classes.mintButtonLabel}>Mint</Typography>
+                </Box>
               </Box>
               
               <Box className={classes.mintDescription}>Max 20 per tansaction. Need more? Just repeat.</Box>

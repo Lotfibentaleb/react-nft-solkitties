@@ -31,10 +31,12 @@ const useStyles = makeStyles((theme: Theme) =>
     // Solana Avatar Row
     solanaAvatarRow: {
       width: '100%',
+      marginTop: '-20px',
       display: 'flex',
       justifyContent: 'flex-end',
       [theme.breakpoints.down('md')]: {
         justifyContent: 'center',
+        marginTop: '0px',
     },
     },
     solanaAvatarBox: {
