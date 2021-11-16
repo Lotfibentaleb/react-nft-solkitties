@@ -317,8 +317,8 @@ const useStyles = makeStyles((theme: Theme) =>
       width: '545px', 
       height: '252.4px',
       [theme.breakpoints.down('xs')]: {
-        width: '100%', 
-        height: 'auto',
+        width: '100vw', 
+        height: 'calc(100vw * 0.47)',
       },
     },
     roadmapFooterLabelImageArea: {
