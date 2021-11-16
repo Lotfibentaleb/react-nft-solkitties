@@ -47,9 +47,11 @@ export const Story = () => {
                 <p>
                   Giveaways everyday until our launch !
                 </p>
-                <JoinButton>
-                  <p>JOIN</p>
-                </JoinButton>
+                <a href='https://discord.gg/7Hg6rHbkke' target="_blank" style={{textDecoration: 'none'}}>
+                  <JoinButton>
+                    <p>JOIN</p>
+                  </JoinButton>
+                </a>
               </DiscordLeftPanel>
               <DiscordRightPanel>
                 <img src="assets/images/discord_area_avatar.png" />

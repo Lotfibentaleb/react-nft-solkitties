@@ -53,10 +53,10 @@ export const MyNavBar = () => {
               <span className='top-menu top-mr' onClick={() => handleGoSection('faq')}>FAQ</span>
             </div>
             <div className='top-social'>
-              <a href='https://twitter.com/SolKitties'>
+              <a href='https://twitter.com/SolKitties' target="_blank">
                 <img src={twitterIcon} alt='twitter'/>
               </a>
-              <a href='https://discord.gg/7Hg6rHbkke'>
+              <a href='https://discord.gg/7Hg6rHbkke' target="_blank">
                 <img src={discrodIcon} alt='discord'/>
               </a>
             </div>
@@ -72,10 +72,10 @@ export const MyNavBar = () => {
           <span className='logo-title'>Sol kittes</span>
         </div>
         <div className='top-social'>
-          <a href='https://twitter.com/SolKitties'>
+          <a href='https://twitter.com/SolKitties' target="_blank">
             <img src={twitterIcon} alt='twitter'/>
           </a>
-          <a href='https://discord.gg/7Hg6rHbkke'>
+          <a href='https://discord.gg/7Hg6rHbkke' target="_blank">
             <img src={discrodIcon} alt='discord'/>
           </a>
         </div>

@@ -312,7 +312,10 @@ const useStyles = makeStyles((theme: Theme) =>
       border: 'none',
       outline: 'none',
       fontSize: '25px',
-      color: '#ffffff'
+      color: '#ffffff',
+      '&::placeholder': {
+        color: '#FFFFFF'
+      }
     },
     priceGas: {
       textAlign: 'right',
@@ -402,7 +405,7 @@ export const Minting = () => {
                 </Box>
               </Box>
               
-              <Box className={classes.mintDescription}>Max 20 per tansaction. Need more? Just repeat.</Box>
+              <Box className={classes.mintDescription}>Max 20 per transaction. <br />Need more? Just repeat.</Box>
             </Grid>
             
             <Hidden lgUp>
