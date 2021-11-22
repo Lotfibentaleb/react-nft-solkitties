@@ -25,6 +25,19 @@
   font-family: 'Open Sans';
 }
 
+.welcome-title-content{
+  width: fit-content;
+  position: relative;
+}
+
+.welcome-title-star{
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  right: -17px;
+  top:-23px;
+}
+
 .welcome-desc{
   font-weight: 600;
   font-size: 23px;
@@ -137,6 +150,12 @@
   .welcome-title{
     font-size: 35px;
   }
+  .welcome-title-star{
+    width: 25px;
+    height: 25px;
+    right: -12px;
+    top:-13px;
+  }
   .welcome-desc{
     font-size: 15px;
   }
@@ -206,6 +225,12 @@
 @media (min-width: 870px) {
   .welcome-title{
     font-size: 35px;
+  }
+  .welcome-title-star{
+    width: 25px;
+    height: 25px;
+    right: -12px;
+    top:-13px;
   }
   .sale-time{
     margin-top: 10px;
@@ -285,6 +310,12 @@
   }
   .welcome-title{
     font-size: 59px;
+  }
+  .welcome-title-star{
+    width: 35px;
+    height: 35px;
+    right: -17px;
+    top:-23px;
   }
   .welcome {
     font-size: 28px;

@@ -37,7 +37,12 @@ export const HomeHero = () => {
               Welcome to
             </div>
             <div className='welcome-title'>
-              SOL KITTIES
+              <div className="welcome-title-content">
+                SOL KITTIES
+                <div className="welcome-title-star">
+                  <img src="assets/part1/home-star.png" style={{width: '100%', height: '100%'}}/>
+                </div>
+              </div>
             </div>
             <div className='welcome-desc'>
               The invasion is imminent, be-hold from the mighty kitties. 
