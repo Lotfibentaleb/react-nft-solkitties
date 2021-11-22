@@ -1,7 +1,6 @@
 import './navBar.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import eye from '../../assets/eye.png'
 import { Button, CircularProgress, Snackbar } from "@material-ui/core";
 
 const navBar = () => {
@@ -25,7 +24,6 @@ const navBar = () => {
       <div style={{...frowBetween, width: '70%'}}>
         <div>
           <a href=''>
-            <img src={eye} style={{width: '30px'}}/>
           </a>  
         </div>
         <div style={{...frowBetween, width: '25%'}}>

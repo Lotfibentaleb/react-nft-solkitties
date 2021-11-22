@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Countdown from "react-countdown";
 import { Box, Button, CircularProgress, Snackbar, Typography } from "@material-ui/core";
 import Alert from "@material-ui/lab/Alert";
-import eye from './media/eye.png'
 import * as anchor from "@project-serum/anchor";
 
 import { LAMPORTS_PER_SOL } from "@solana/web3.js";
@@ -240,7 +239,6 @@ const Home = (props: HomeProps) => {
         }
       </MintContainer>
 
-      <img src={eye} style={{ width: '300px', marginTop: '20px' }} alt="Koby" />
       <Box textAlign="center" marginTop={3}>
         <Typography variant="caption" style={{ color: '#9ca9b3' }}>Powered by <strong>Koby</strong></Typography>
       </Box>
