@@ -76,18 +76,18 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 const FAQ_DATAS = [
-  {question: 'Q: What are SolKitties?',                         answer: ' Sol Kitties are a collection of distinctive kitties. We spent over 4 months drawing the kitties.'},
-  {question: 'Q: Will this have this utility?',                 answer: ' Yes! The collection will have a utility in our game coming out 2022.'},
-  {question: 'Q: Is this a generative NFT project?',            answer: ' It is, 3080 SolKitties in total'},
-  {question: 'Q: How much is a SolKitty for?',                  answer: ' 1 SOL.'},
-  {question: 'Q: When is the next sale/drop date?',             answer: ' December, 2021.'},
-  {question: 'Q: What blockchain does SolKitties bellonw to?',  answer: ' Well, SOLKitties come from Solana blockchain!'},
-  {question: 'Q: How do I buy a SolKitty NFT?',                 answer: ' You will head to our website during launch and mint a random fighter during the presale or public mint. If you miss that there will be a secondary market!'},
-  {question: 'Q: What about a secondary market?',               answer: ' You can count with it!'},
-  {question: 'Q: How do I create and found my Solana wallet?',  answer: ' Go to Phantom, download the Phantom wallet extension. Once the extension is installed, run the program and create a new wallet. Then, to found it go to FTX.com or Binance (any exchange that sells and supports Solana token transfer) and purchase SOL. Once you have SOL, send it over to your SOL address in your Solana wallet.'},
-  {question: 'Q: Do I want own the Solkitty I’m paying for?',   answer: ' Your Kitty is yours with full intellectual property owned by you, do as you must!'},
-  {question: 'Q: Is there a limit on how many I can mint?',     answer: ' There has never been a limit on the creation of greatness. No!'},
-  {question: 'Q: Where is the digital artwork stored?',         answer: ' SolKitties will be stored on Airweave which is a decentralized data storage. Airweave backs data with sustainable and perpetual endowments. This all means you can store data for eternity. Your Legend will live forever!'},
+  {question: 'Q: What are Sol Kitties?',                        answer: ' Sol Kitties are a collection of distinctive kitties. We spent over 4 months drawing the kitties.'},
+  {question: 'Q: Will this have a utility?',                    answer: ' Yes! The collection will have a utility in our game coming out 2022 Q1.'},
+  {question: 'Q: How many items in this NFT project?',          answer: ' There are 3,080 hand-drawn Sol Kitties in total'},
+  {question: 'Q: How much mint cost for a Sol Kitty?',          answer: ' 1 SOL.'},
+  {question: 'Q: When is the next sale/drop date?',             answer: ' December 2021.'},
+  {question: 'Q: What blockchain does Sol Kitties bellong to?', answer: ' Sol Kitties are about to invade the Solana block-chain!'},
+  {question: 'Q: How do I buy a Sol Kitty NFT?',                answer: ' You will head to our website during launch and mint a random Sol Kitty during the presale or public mint. If you miss that there will be a secondary market!'},
+  {question: 'Q: What about a secondary market?',               answer: ' You can count on it!'},
+  {question: 'Q: How do I create and fund my Solana wallet?',   answer: ' Go to Phantom, download the Phantom wallet extension. Once the extension is installed, create a new wallet. Then, to fund it go to FTX.com or Binance (any exchange that sells and supports Solana token transfer) and purchase SOL. Once you have SOL, send it over to your SOL address in your Solana wallet.'},
+  {question: 'Q: Do I own the Solkitty I’m paying for?',        answer: ' Your Kitty is yours with full intellectual property owned by you, do as you want!'},
+  {question: 'Q: Is there a limit on how many I can mint?',     answer: ' There is no limit. Enjoy and mint as much as you want.'},
+  {question: 'Q: Where is the digital artwork stored?',         answer: ' Sol Kitties will be stored on Airweave, which is a decentralized data storage. Airweave backs data with sustainable and perpetual endowments. This all means you can store data for eternity. Your Kitty will live forever!'},
   {question: 'Q: Where will the royalties go to?',              answer: ' All 5% of resale royalties will be used to sweep out the floor and increase the collection value as we are building a strong community and aiming for the long-run.'},
 ]
 

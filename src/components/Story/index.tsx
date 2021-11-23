@@ -45,7 +45,7 @@ export const Story = () => {
                   JOIN OUR DISCORD
                 </div>
                 <p>
-                  Giveaways everyday until our launch !
+                  Giveaways events until our launch !
                 </p>
                 <a href='https://discord.gg/7Hg6rHbkke' target="_blank" style={{textDecoration: 'none'}}>
                   <JoinButton>
