@@ -78,7 +78,7 @@ const useStyles = makeStyles((theme: Theme) =>
 const FAQ_DATAS = [
   {question: 'Q: What are Sol Kitties?',                        answer: ' Sol Kitties are a collection of distinctive kitties. We spent over 4 months drawing the kitties.'},
   {question: 'Q: Will this have a utility?',                    answer: ' Yes! The collection will have a utility in our game coming out 2022 Q1.'},
-  {question: 'Q: How many items in this NFT project?',          answer: ' There are 3,080 hand-drawn Sol Kitties in total'},
+  {question: 'Q: How many items in this NFT project?',          answer: ' There are 3,080 hand-drawn Sol Kitties in total.'},
   {question: 'Q: How much mint cost for a Sol Kitty?',          answer: ' 1 SOL.'},
   {question: 'Q: When is the next sale/drop date?',             answer: ' December 2021.'},
   {question: 'Q: What blockchain does Sol Kitties bellong to?', answer: ' Sol Kitties are about to invade the Solana block-chain!'},
