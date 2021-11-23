@@ -338,7 +338,7 @@
     font-size: 17px;
   }
   .sale {
-    width: 40%;
+    width: 45%;
     padding-left: 0px;
   }
   .sale-image {
@@ -355,6 +355,7 @@
   }
   .sale-desc {
     margin-top: 20px;
+    margin-right: 10px;
     font-size: 14.3px;
     line-height: 19px;
   }

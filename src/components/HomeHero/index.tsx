@@ -74,8 +74,8 @@ export const HomeHero = () => {
                 </div>
               </div>
               <div className='sale-desc'>
-                Sol Kitties is a revolutionary community-oriented NFT project on Solana block-chain with a unique hand-drown art
-                <span className='sale-desc-link'>specially  made for the Community.</span>   &nbsp;&nbsp;
+                Sol Kitties is a revolutionary community-oriented NFT project on Solana block-chain with a unique hand-drown art &nbsp;&nbsp;
+                <span className='sale-desc-link'>specially  made for the Community.</span>
                 {/*<span className='sale-desc-link'>Check more details.</span>*/}
               </div>
             </div>
