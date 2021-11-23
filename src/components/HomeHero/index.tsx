@@ -74,8 +74,8 @@ export const HomeHero = () => {
                 </div>
               </div>
               <div className='sale-desc'>
-                Sol Kitties is a revolutionary community-oriented NFT project on Solana block-chain with a unique hand-drown art specially
-                made for the Community.   &nbsp;&nbsp;
+                Sol Kitties is a revolutionary community-oriented NFT project on Solana block-chain with a unique hand-drown art
+                <span className='sale-desc-link'>specially  made for the Community.</span>   &nbsp;&nbsp;
                 {/*<span className='sale-desc-link'>Check more details.</span>*/}
               </div>
             </div>
@@ -83,7 +83,7 @@ export const HomeHero = () => {
               <div className='sale-image-wrapper'>
                 <img src='assets/part1/SolKittie_001.png' className='sale-image1' alt='image1' />
                 <img src='assets/part1/SolKittie_002.png' className='sale-image1' alt='image2' />
-                <img src='assets/part1/SolKittie_003.png' className='sale-image1' alt='image3'/>
+                <img src='assets/part1/SolKittie_003.png' className='sale-image1' alt='image3' />
               </div>
             </div>
           </div>
