@@ -789,7 +789,7 @@ export const RoadMap = () => {
 
                 <Box className={classes.rightTextItem}>
                   <img src='assets/images/dot.png' className={classes.textLeftImage} alt='dot' />
-                  <Typography className={classes.rightTextDetail}><span style={{background: '#FE5122', marginLeft: '-5px', color: '#ffffff', paddingLeft: '5px', paddingRight: '10px', borderRadius: '1px'}}>ROYALTIES DISTRIBUTION!
+                  <Typography className={classes.rightTextDetail}><span style={{background: '#FE5122', marginLeft: '-5px', color: '#ffffff', paddingLeft: '5px', paddingRight: '10px', borderRadius: '1px'}}>ROYALTIES FLOOR SWEEPING!
                       </span></Typography>
                 </Box>
               </Box>
