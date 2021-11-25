@@ -405,7 +405,7 @@ export const Minting = () => {
                 </Box>
               </Box>
               
-              <Box className={classes.mintDescription}>Max 20 per transaction. <br />Need more? Just repeat.</Box>
+              <Box className={classes.mintDescription}>Max 1 per transaction. <br />Need more? Just repeat.</Box>
             </Grid>
             
             <Hidden lgUp>
