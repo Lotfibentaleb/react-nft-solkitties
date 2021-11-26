@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import  Home from './pages/home';
 import  NewPage from './pages/new';
 import Minting from './pages/minting';
+import FreeMinting from './pages/freeMinting';
 // import "aos/dist/aos.css";
 // import AOS from 'aos';
 
@@ -30,6 +31,7 @@ const App = () => {
       <Route path="/" exact component={NewPage} />
       <Route path="/new" exact component={Home} />
       <Route path="/minting" exact component={Minting} />
+      <Route path="/freeminting" exact component={FreeMinting} />
     </Router>
   );
 };

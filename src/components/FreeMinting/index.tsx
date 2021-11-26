@@ -361,7 +361,7 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 
-export const Minting = () => {
+export const FreeMinting = () => {
   const classes = useStyles()
 
   return (
@@ -410,7 +410,7 @@ export const Minting = () => {
                     <Box className={classes.priceArea}>
                       <Box className={classes.priceLabel}>Price</Box>
                       <Box className={classes.priceInput}>
-                        <input className={classes.priceInputBox} placeholder='1 SOL' disabled />
+                        <input className={classes.priceInputBox} placeholder='0.0001 SOL' disabled />
                       </Box>
                       <Box className={classes.priceGas}>+ gas fee</Box>
                     </Box>
@@ -468,7 +468,7 @@ export const Minting = () => {
                     <Box className={classes.priceArea}>
                       <Box className={classes.priceLabel}>Price</Box>
                       <Box className={classes.priceInput}>
-                        <input className={classes.priceInputBox} placeholder='1 SOL' disabled />
+                        <input className={classes.priceInputBox} placeholder='0.0001 SOL' disabled />
                       </Box>
                       <Box className={classes.priceGas}>+ gas fee</Box>
                     </Box>
