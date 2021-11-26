@@ -482,7 +482,7 @@ export const Minting = () => {
                     <Box className={classes.priceArea}>
                       <Box className={classes.remainingLabel}>Remaining</Box>
                       <Box className={classes.remainingInput}>
-                        <input className={classes.priceInputBox} placeholder='3,080' />
+                        <input className={classes.priceInputBox} placeholder='3,080' disabled />
                       </Box>
                     </Box>
                   </Grid>
